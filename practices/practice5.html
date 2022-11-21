@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 연습5-폼만들기부터</title>
+    <style>
+        .box { background-color: #dee2e6;
+               border: black dashed 1px;
+               width: 500px;
+               height: 500px;
+               margin-left: 50px;
+               margin-right: 50px;
+               padding: 5px;
+               display: inline-block;
+               box-sizing: border-box;
+               clear: both;
+                }
+        .box > h3 { text-align: center }
+    </style>
+</head>
+<body>
+<hr>
+<form class="box">
+    <fieldset>
+    <h3><legend> 자기소개서 작성 </legend></h3>
+    이름 : <input type="text" size="15px"><br>
+    암호 : <input type="text" size="15px"><br>
+    자소서 : <textarea rows="10px" cols="15px"></textarea><br>
+    출신국 : <input type="text" list="country">
+            <datalist id="country">
+                <option value="대한민국"></option>
+                <option value="일본"></option>
+                <option value="중국"></option>
+            </datalist></fieldset>
+
+    <h3> 버튼 예시 </h3>
+    검색: <input type="text" size="10px" value="">
+         <input type="button" width="20px" height="10px" value="버튼1">
+         <button type="button" width="20px" height="10px">버튼2</button><br>
+    SUMMIT : <input type="submit" value="전송1">
+             <input type="submit" value="전송2"><br>
+    RESET : <input type="reset" value="리셋1"><br>
+    IMG : <input type="image" src="img/apple.jpg" width="20" height="10">
+</form>
+<form class="box">
+    <h3> 단일형 & 체크박스 </h3>
+    먹고 싶은 것을 한가지 선택 <br>
+    <input type="radio" name="food" value="짜장면"> 짜장면
+    <input type="radio" name="food" value="짬뽕" chedcked> 짬뽕
+    <input type="radio" name="food" value="탕수육"> 탕수육 <br>
+    보유 IT 기술 <br>
+    <input type="checkbox" value="python" checked> Python
+    <input type="checkbox" value="java"> Java
+    <input type="checkbox" value="Javascript"> JavaScript
+    <input type="checkbox" value="C/C++"> C/C++
+
+    <h3> 콤보 박스 </h3>
+    먹고 싶은 것 선택 : <br>
+    <select name="food">
+        <option value="1"> 짜장면</option>
+        <option value="2" selected> 짬뽕 </option>
+        <option value="3"> 탕수육 </option>
+    </select><br><br>
+
+    <h3> 캡션 만들기 </h3>
+    <label>사용자 ID: <input type="text" size="15" value=""></label><br>
+    <label for="pass">비밀번호: </label>
+    <input id="pass" type="password" size="15" value="">
+    <input type="submit" value="완료">
+</form>
+<hr>
+</body>
+</html>
