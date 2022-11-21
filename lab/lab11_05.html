@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>객체 생성</title>
+
+</head>
+<body>
+<h2>자동차 객체 만들기 </h2>
+<hr>
+    <script>
+        var my_car = new Object();
+        my_car.maker = "Hyundai";
+        my_car["model"] = "Grandeur";
+        my_car["price"] = 0;
+        my_car.speed = 0;
+
+        my_car.accelerate = function () {
+            my_car.speed += 10;
+        }
+        my_car["speed"] = function () {
+            my_car["speed"] = 0;
+        }
+        my_car.stop = function () {
+            my_car['speed'] = 0;
+        }
+
+        document.write("<p> 제조사 : " + my_car['maker'] + "</p>");
+        document.write("<p> 가격 : " + my_car['price'] + "</p>");
+        document.write(my_car);
+
+        console.log(my_car);
+
+        var company = {
+            name : "Microsoft",
+            ceo : {
+                name : "Bill Gates",
+                fav_color : "blue"
+            },
+            "stock_of_company" : 110,
+            promote : function() {
+                document.write('승진했습니다.')
+            }
+        };
+        for (var prop in my_car) {
+           document.write('<p>' + prop + " : " + my_car[prop] + '</p>')
+        }
+        // document.write('<p> 업체 이름 : ' + company.name + '</p>');
+        // document.write('<p> 주식보유량 : ' + company.stock_of_company + '</p>');  // 따옴표 없이 변수처럼 처리해야 함.
+        // document.write('<p> ceo 이름 ' + company['ceo'].name );
+        // document.write(company.promote());
+        console.log(company);
+    </script>
+</body>
+</html>
