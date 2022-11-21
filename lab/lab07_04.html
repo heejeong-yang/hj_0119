@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Floating Elements</title>
+    <style>
+        * { box-sizing: border-box }
+        div { background-color: #00FFFF }
+        p {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+           /* float: left;*/
+            margin-right: 10px;
+            margin-bottom: 25px;
+        }
+        #p1 {
+            background-color: #a52834;
+            position: relative;
+            top: 65px;
+            left: 65px;
+            /*float: left;
+            height: 100px;*/
+        }
+        #p2 {
+            background-color: #deb887;
+            /*float: right;
+            height: 200px;*/
+        }
+        #p3 {
+            background-color: #3dd5f3;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            /*clear: both; clear 를 both로 하면 중복되는 구역이 없어짐*/
+        }
+        #p4 {
+            background-color: #ff7f50;
+            /*clear: left;*/
+        }
+        div#container {
+            position: relative;
+        }
+        section {
+            clear: left;
+        }
+    </style>
+</head>
+<body>
+<h1>Floating Elements</h1>
+<div id="container">
+    <p id="p1">1</p>
+    <p id="p2">2</p>
+    <p id="p3">3</p>
+    <p id="p4">4</p>
+<section> This is regular content continueing after the paragraph boxes.</section>
+</div>
+</body>
+</html>
