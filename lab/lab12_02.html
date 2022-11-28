@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 처리</title>
+    <script src = "js/my_script02.js">
+        // var p;
+        // function init() {
+            // p = document.querySelector('#msg');
+            /* DOM객체 이벤트 처리기에 대해 함수 대응
+            p.onmouseover = over ;
+            p.onmouseout = out ; */
+
+            /* DOM 객체의 addEventListener() 메쏘드 활용
+            p.addEventListener("mouseover", over);
+            p.addEventListener("mouseout", out); */
+
+            /* p.onmouseover = function () {
+                p.style.backgroundColor = 'orchid';
+            }
+            p.onmouseout = function () {
+                p.style.backgroundColor = "white";
+            }
+        }
+        function over() {
+            p.style.backgroundColor = "orchid";
+        }
+        function out() {
+            p.style.backgroundColor = "white";
+        } */
+    </script>
+</head>
+<body onroad="init()">
+<h2>mouseover, mouseout 이벤트에 대한 처리 </h2>
+<p id = "msg" onmouseover = "this.style.backgroundColor = 'orchid';"
+              onmouseout = "this.style.backgroundColor = 'white';">여기에 마우스를 올려보세요.</p>
+</body>
+</html>
