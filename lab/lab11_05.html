@@ -45,10 +45,10 @@
         for (var prop in my_car) {
            document.write('<p>' + prop + " : " + my_car[prop] + '</p>')
         }
-        // document.write('<p> 업체 이름 : ' + company.name + '</p>');
-        // document.write('<p> 주식보유량 : ' + company.stock_of_company + '</p>');  // 따옴표 없이 변수처럼 처리해야 함.
-        // document.write('<p> ceo 이름 ' + company['ceo'].name );
-        // document.write(company.promote());
+        document.write('<p> 업체 이름 : ' + company.name + '</p>');
+        document.write('<p> 주식보유량 : ' + company.stock_of_company + '</p>');  // 따옴표 없이 변수처럼 처리해야 함.
+        document.write('<p> ceo 이름 ' + company['ceo'].name + '</p>');
+        document.write('<p>' + company.promote() + '</p>');
         console.log(company);
     </script>
 </body>
