@@ -420,6 +420,7 @@
 .ri-chat-voice-line:before { content: "\eb77"; }
 .ri-check-double-fill:before { content: "\eb78"; }
 .ri-check-double-line:before { content: "\eb79"; }
+.ri-community-line { content: "\eb79"; }
 .ri-check-fill:before { content: "\eb7a"; }
 .ri-check-line:before { content: "\eb7b"; }
 .ri-checkbox-blank-circle-fill:before { content: "\eb7c"; }
