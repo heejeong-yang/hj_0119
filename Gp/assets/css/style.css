@@ -560,21 +560,13 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about {
-  box-sizing: border-box;
-  width: 65%;
-  border: 0px solid black;
-  padding: 30px;
-  float: left;
-}
-
 .about .content h3 {
   font-weight: 700;
   font-size: 28px;
   font-family: "Poppins", sans-serif;
 }
 
-.about .content ul {
+.about ul {
   list-style: none;
   padding: 0;
 }
@@ -584,7 +576,7 @@ section {
   position: relative;
 }
 
-.about .content ul i {
+.about .content ul li i {
   position: absolute;
   font-size: 20px;
   left: 0;
@@ -1156,16 +1148,15 @@ section {
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
-.team {
+#team {
   box-sizing: border-box;
-  width: 35%;
   border: 0px solid black;
-  float: right;
+  float: left;
   background: #fff;
-  padding: 60px;
+  padding: 60px 80px;
 }
 
-.team .member {
+#team .member {
   margin-bottom: 20px;
   overflow: hidden;
   border-radius: 5px;
@@ -1173,12 +1164,12 @@ section {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-.team .member .member-img {
+#team .member .member-img {
   position: relative;
   overflow: hidden;
 }
 
-.team .member .social {
+#team .member .social {
   position: absolute;
   left: 0;
   bottom: 30px;
@@ -1188,7 +1179,7 @@ section {
   text-align: center;
 }
 
-.team .member .social a {
+#team .member .social a {
   transition: color 0.3s;
   color: #151515;
   margin: 0 3px;
@@ -1203,42 +1194,42 @@ section {
   align-items: center;
 }
 
-.team .member .social a:hover {
+#team .member .social a:hover {
   color: #151515;
   background: #568C73;
 }
 
-.team .member .social i {
+#team .member .social i {
   font-size: 18px;
   line-height: 0;
 }
 
-.team .member .member-info {
-  padding: 25px 15px;
+#team .member .member-info {
+  padding: 10px 15px;
 }
 
-.team .member .member-info h4 {
+#team .member .member-info h4 {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 18px;
   color: #151515;
 }
 
-.team .member .member-info span {
+#team .member .member-info span {
   display: block;
   font-size: 13px;
   font-weight: 400;
   color: #aaaaaa;
 }
 
-.team .member .member-info p {
+#team .member .member-info p {
   font-style: italic;
   font-size: 14px;
   line-height: 26px;
   color: #777777;
 }
 
-.team .member:hover .social {
+#team .member:hover .social {
   opacity: 1;
   bottom: 15px;
 }
@@ -1281,8 +1272,9 @@ section {
 }
 
 .contact .info .email,
-.contact .info .phone {
-  margin-top: 40px;
+.contact .info .phone,
+.contact .info .address {
+  margin-top: 20px;
 }
 
 .contact .php-email-form {
@@ -1455,7 +1447,7 @@ section {
 #footer .footer-top {
   background: #151515;
   border-bottom: 1px solid #222222;
-  padding: 60px 0 30px 0;
+  <!--padding: 60px 0 30px 0;-->
 }
 
 #footer .footer-top .footer-info {
