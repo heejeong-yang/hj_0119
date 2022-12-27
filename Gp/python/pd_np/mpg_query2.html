@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>mpg_query</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>mpg_query2</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14259,35 +14259,15 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="mpg.csv-Inside-&#46020;&#52636;">mpg.csv Insight &#46020;&#52636;<a class="anchor-link" href="#mpg.csv-Inside-&#46020;&#52636;">&#182;</a></h2>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>manufacturer: 자동차 제조사</li>
-<li>model: </li>
-<li>displ : 배기량</li>
-<li>yeal:제조년도</li>
-<li>cyl: 실린더 수</li>
-<li>trans: 변속기</li>
-<li>drv: 구동방식(f = 전륜구동, r = 후륜구동, 4= 사륜구동)</li>
-<li>cty: 시내주행 연비</li>
-<li>hwy: 고속주행 연비</li>
-<li>fi: 연료 종류</li>
-<li>category: 자동차 종류</li>
-</ul>
-
+<h2 id="mpg-.csv-Insight2">mpg .csv Insight2<a class="anchor-link" href="#mpg-.csv-Insight2">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 필요한 라이브러리 불러오기 </span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </pre></div>
 
      </div>
@@ -14298,11 +14278,24 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[78]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># mpg 파일 불러오기</span>
-<span class="n">mpg</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;mpg.csv&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpg</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;mpg.csv&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14313,10 +14306,10 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpg</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpg</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14332,7 +14325,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
 
 
@@ -14439,93 +14432,8 @@ a.anchor-link {
       <td>p</td>
       <td>compact</td>
     </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>229</th>
-      <td>volkswagen</td>
-      <td>passat</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>auto(s6)</td>
-      <td>f</td>
-      <td>19</td>
-      <td>28</td>
-      <td>p</td>
-      <td>midsize</td>
-    </tr>
-    <tr>
-      <th>230</th>
-      <td>volkswagen</td>
-      <td>passat</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>manual(m6)</td>
-      <td>f</td>
-      <td>21</td>
-      <td>29</td>
-      <td>p</td>
-      <td>midsize</td>
-    </tr>
-    <tr>
-      <th>231</th>
-      <td>volkswagen</td>
-      <td>passat</td>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>6</td>
-      <td>auto(l5)</td>
-      <td>f</td>
-      <td>16</td>
-      <td>26</td>
-      <td>p</td>
-      <td>midsize</td>
-    </tr>
-    <tr>
-      <th>232</th>
-      <td>volkswagen</td>
-      <td>passat</td>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>6</td>
-      <td>manual(m5)</td>
-      <td>f</td>
-      <td>18</td>
-      <td>26</td>
-      <td>p</td>
-      <td>midsize</td>
-    </tr>
-    <tr>
-      <th>233</th>
-      <td>volkswagen</td>
-      <td>passat</td>
-      <td>3.6</td>
-      <td>2008</td>
-      <td>6</td>
-      <td>auto(s6)</td>
-      <td>f</td>
-      <td>17</td>
-      <td>26</td>
-      <td>p</td>
-      <td>midsize</td>
-    </tr>
   </tbody>
 </table>
-<p>234 rows × 11 columns</p>
 </div>
 </div>
 
@@ -14538,11 +14446,10 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 행, 열 파악</span>
-<span class="n">mpg</span><span class="o">.</span><span class="n">shape</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpg</span><span class="p">[[</span><span class="s1">&#39;manufacturer&#39;</span><span class="p">,</span><span class="s1">&#39;model&#39;</span><span class="p">]]</span>
 </pre></div>
 
      </div>
@@ -14558,13 +14465,93 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>(234, 11)</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>manufacturer</th>
+      <th>model</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>audi</td>
+      <td>a4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>audi</td>
+      <td>a4</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>audi</td>
+      <td>a4</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>audi</td>
+      <td>a4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>audi</td>
+      <td>a4</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>229</th>
+      <td>volkswagen</td>
+      <td>passat</td>
+    </tr>
+    <tr>
+      <th>230</th>
+      <td>volkswagen</td>
+      <td>passat</td>
+    </tr>
+    <tr>
+      <th>231</th>
+      <td>volkswagen</td>
+      <td>passat</td>
+    </tr>
+    <tr>
+      <th>232</th>
+      <td>volkswagen</td>
+      <td>passat</td>
+    </tr>
+    <tr>
+      <th>233</th>
+      <td>volkswagen</td>
+      <td>passat</td>
+    </tr>
+  </tbody>
+</table>
+<p>234 rows × 2 columns</p>
+</div>
 </div>
 
 </div>
@@ -14628,11 +14615,10 @@ memory usage: 20.2+ KB
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#기초 통계량 확인</span>
-<span class="n">mpg</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpg</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14648,7 +14634,7 @@ memory usage: 20.2+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 
 
 
@@ -14754,1289 +14740,22 @@ memory usage: 20.2+ KB
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpg</span><span class="p">[</span><span class="s1">&#39;manufacturer&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>dodge         37
-toyota        34
-volkswagen    27
-ford          25
-chevrolet     19
-audi          18
-hyundai       14
-subaru        14
-nissan        13
-honda          9
-jeep           8
-pontiac        5
-mercury        4
-land rover     4
-lincoln        3
-Name: manufacturer, dtype: int64</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#47784;&#46304;-column-5&#44060;-&#51060;&#49345;-&#49324;&#50857;&#54616;&#44592;">&#47784;&#46304; column 5&#44060; &#51060;&#49345; &#49324;&#50857;&#54616;&#44592;<a class="anchor-link" href="#&#47784;&#46304;-column-5&#44060;-&#51060;&#49345;-&#49324;&#50857;&#54616;&#44592;">&#182;</a></h3>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="query(-)">query( )<a class="anchor-link" href="#query(-)">&#182;</a></h4>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># mpg의 manufacturer가 lincoln인 경우만 추출</span>
-<span class="n">mpg</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;manufacturer==&quot;lincoln&quot;&#39;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>manufacturer</th>
-      <th>model</th>
-      <th>displ</th>
-      <th>year</th>
-      <th>cyl</th>
-      <th>trans</th>
-      <th>drv</th>
-      <th>cty</th>
-      <th>hwy</th>
-      <th>fl</th>
-      <th>category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>134</th>
-      <td>lincoln</td>
-      <td>navigator 2wd</td>
-      <td>5.4</td>
-      <td>1999</td>
-      <td>8</td>
-      <td>auto(l4)</td>
-      <td>r</td>
-      <td>11</td>
-      <td>17</td>
-      <td>r</td>
-      <td>suv</td>
-    </tr>
-    <tr>
-      <th>135</th>
-      <td>lincoln</td>
-      <td>navigator 2wd</td>
-      <td>5.4</td>
-      <td>1999</td>
-      <td>8</td>
-      <td>auto(l4)</td>
-      <td>r</td>
-      <td>11</td>
-      <td>16</td>
-      <td>p</td>
-      <td>suv</td>
-    </tr>
-    <tr>
-      <th>136</th>
-      <td>lincoln</td>
-      <td>navigator 2wd</td>
-      <td>5.4</td>
-      <td>2008</td>
-      <td>8</td>
-      <td>auto(l6)</td>
-      <td>r</td>
-      <td>12</td>
-      <td>18</td>
-      <td>r</td>
-      <td>suv</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
+<ul>
+<li>groupby + agg</li>
+</ul>
 
 </div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># manufacturer가 volkswagen가 아닌 경우 추출</span>
-<span class="n">mpg</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;manufacturer!=&quot;volkswagen&quot;&#39;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[45]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>manufacturer</th>
-      <th>model</th>
-      <th>displ</th>
-      <th>year</th>
-      <th>cyl</th>
-      <th>trans</th>
-      <th>drv</th>
-      <th>cty</th>
-      <th>hwy</th>
-      <th>fl</th>
-      <th>category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>4</td>
-      <td>auto(l5)</td>
-      <td>f</td>
-      <td>18</td>
-      <td>29</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>4</td>
-      <td>manual(m5)</td>
-      <td>f</td>
-      <td>21</td>
-      <td>29</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>manual(m6)</td>
-      <td>f</td>
-      <td>20</td>
-      <td>31</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>auto(av)</td>
-      <td>f</td>
-      <td>21</td>
-      <td>30</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>6</td>
-      <td>auto(l5)</td>
-      <td>f</td>
-      <td>16</td>
-      <td>26</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>202</th>
-      <td>toyota</td>
-      <td>toyota tacoma 4wd</td>
-      <td>2.7</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>manual(m5)</td>
-      <td>4</td>
-      <td>17</td>
-      <td>22</td>
-      <td>r</td>
-      <td>pickup</td>
-    </tr>
-    <tr>
-      <th>203</th>
-      <td>toyota</td>
-      <td>toyota tacoma 4wd</td>
-      <td>3.4</td>
-      <td>1999</td>
-      <td>6</td>
-      <td>manual(m5)</td>
-      <td>4</td>
-      <td>15</td>
-      <td>17</td>
-      <td>r</td>
-      <td>pickup</td>
-    </tr>
-    <tr>
-      <th>204</th>
-      <td>toyota</td>
-      <td>toyota tacoma 4wd</td>
-      <td>3.4</td>
-      <td>1999</td>
-      <td>6</td>
-      <td>auto(l4)</td>
-      <td>4</td>
-      <td>15</td>
-      <td>19</td>
-      <td>r</td>
-      <td>pickup</td>
-    </tr>
-    <tr>
-      <th>205</th>
-      <td>toyota</td>
-      <td>toyota tacoma 4wd</td>
-      <td>4.0</td>
-      <td>2008</td>
-      <td>6</td>
-      <td>manual(m6)</td>
-      <td>4</td>
-      <td>15</td>
-      <td>18</td>
-      <td>r</td>
-      <td>pickup</td>
-    </tr>
-    <tr>
-      <th>206</th>
-      <td>toyota</td>
-      <td>toyota tacoma 4wd</td>
-      <td>4.0</td>
-      <td>2008</td>
-      <td>6</td>
-      <td>auto(l5)</td>
-      <td>4</td>
-      <td>16</td>
-      <td>20</td>
-      <td>r</td>
-      <td>pickup</td>
-    </tr>
-  </tbody>
-</table>
-<p>207 rows × 11 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># year가 2003 초과인 경우의 개수 추출</span>
-<span class="n">mpg</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;year &gt; 2003&#39;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>manufacturer</th>
-      <th>model</th>
-      <th>displ</th>
-      <th>year</th>
-      <th>cyl</th>
-      <th>trans</th>
-      <th>drv</th>
-      <th>cty</th>
-      <th>hwy</th>
-      <th>fl</th>
-      <th>category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>manual(m6)</td>
-      <td>f</td>
-      <td>20</td>
-      <td>31</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>auto(av)</td>
-      <td>f</td>
-      <td>21</td>
-      <td>30</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>3.1</td>
-      <td>2008</td>
-      <td>6</td>
-      <td>auto(av)</td>
-      <td>f</td>
-      <td>18</td>
-      <td>27</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>audi</td>
-      <td>a4 quattro</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>manual(m6)</td>
-      <td>4</td>
-      <td>20</td>
-      <td>28</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>audi</td>
-      <td>a4 quattro</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>auto(s6)</td>
-      <td>4</td>
-      <td>19</td>
-      <td>27</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>225</th>
-      <td>volkswagen</td>
-      <td>new beetle</td>
-      <td>2.5</td>
-      <td>2008</td>
-      <td>5</td>
-      <td>manual(m5)</td>
-      <td>f</td>
-      <td>20</td>
-      <td>28</td>
-      <td>r</td>
-      <td>subcompact</td>
-    </tr>
-    <tr>
-      <th>226</th>
-      <td>volkswagen</td>
-      <td>new beetle</td>
-      <td>2.5</td>
-      <td>2008</td>
-      <td>5</td>
-      <td>auto(s6)</td>
-      <td>f</td>
-      <td>20</td>
-      <td>29</td>
-      <td>r</td>
-      <td>subcompact</td>
-    </tr>
-    <tr>
-      <th>229</th>
-      <td>volkswagen</td>
-      <td>passat</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>auto(s6)</td>
-      <td>f</td>
-      <td>19</td>
-      <td>28</td>
-      <td>p</td>
-      <td>midsize</td>
-    </tr>
-    <tr>
-      <th>230</th>
-      <td>volkswagen</td>
-      <td>passat</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>manual(m6)</td>
-      <td>f</td>
-      <td>21</td>
-      <td>29</td>
-      <td>p</td>
-      <td>midsize</td>
-    </tr>
-    <tr>
-      <th>233</th>
-      <td>volkswagen</td>
-      <td>passat</td>
-      <td>3.6</td>
-      <td>2008</td>
-      <td>6</td>
-      <td>auto(s6)</td>
-      <td>f</td>
-      <td>17</td>
-      <td>26</td>
-      <td>p</td>
-      <td>midsize</td>
-    </tr>
-  </tbody>
-</table>
-<p>117 rows × 11 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># mpg의 fI가 p인 경우만 추출</span>
-<span class="n">mpg</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;fl==&quot;p&quot;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>manufacturer</th>
-      <th>model</th>
-      <th>displ</th>
-      <th>year</th>
-      <th>cyl</th>
-      <th>trans</th>
-      <th>drv</th>
-      <th>cty</th>
-      <th>hwy</th>
-      <th>fl</th>
-      <th>category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>4</td>
-      <td>auto(l5)</td>
-      <td>f</td>
-      <td>18</td>
-      <td>29</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>4</td>
-      <td>manual(m5)</td>
-      <td>f</td>
-      <td>21</td>
-      <td>29</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>manual(m6)</td>
-      <td>f</td>
-      <td>20</td>
-      <td>31</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>auto(av)</td>
-      <td>f</td>
-      <td>21</td>
-      <td>30</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>6</td>
-      <td>auto(l5)</td>
-      <td>f</td>
-      <td>16</td>
-      <td>26</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># cty가 19(제3사분위수)이고 hwy가 27(제3사분위수) 이상인 경우만 추출</span>
-<span class="n">mpg</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;cty &gt;= 19 &amp; hwy &gt;= 27&#39;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>manufacturer</th>
-      <th>model</th>
-      <th>displ</th>
-      <th>year</th>
-      <th>cyl</th>
-      <th>trans</th>
-      <th>drv</th>
-      <th>cty</th>
-      <th>hwy</th>
-      <th>fl</th>
-      <th>category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>4</td>
-      <td>manual(m5)</td>
-      <td>f</td>
-      <td>21</td>
-      <td>29</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>manual(m6)</td>
-      <td>f</td>
-      <td>20</td>
-      <td>31</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>auto(av)</td>
-      <td>f</td>
-      <td>21</td>
-      <td>30</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>audi</td>
-      <td>a4 quattro</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>manual(m6)</td>
-      <td>4</td>
-      <td>20</td>
-      <td>28</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>audi</td>
-      <td>a4 quattro</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>auto(s6)</td>
-      <td>4</td>
-      <td>19</td>
-      <td>27</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>225</th>
-      <td>volkswagen</td>
-      <td>new beetle</td>
-      <td>2.5</td>
-      <td>2008</td>
-      <td>5</td>
-      <td>manual(m5)</td>
-      <td>f</td>
-      <td>20</td>
-      <td>28</td>
-      <td>r</td>
-      <td>subcompact</td>
-    </tr>
-    <tr>
-      <th>226</th>
-      <td>volkswagen</td>
-      <td>new beetle</td>
-      <td>2.5</td>
-      <td>2008</td>
-      <td>5</td>
-      <td>auto(s6)</td>
-      <td>f</td>
-      <td>20</td>
-      <td>29</td>
-      <td>r</td>
-      <td>subcompact</td>
-    </tr>
-    <tr>
-      <th>227</th>
-      <td>volkswagen</td>
-      <td>passat</td>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>4</td>
-      <td>manual(m5)</td>
-      <td>f</td>
-      <td>21</td>
-      <td>29</td>
-      <td>p</td>
-      <td>midsize</td>
-    </tr>
-    <tr>
-      <th>229</th>
-      <td>volkswagen</td>
-      <td>passat</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>auto(s6)</td>
-      <td>f</td>
-      <td>19</td>
-      <td>28</td>
-      <td>p</td>
-      <td>midsize</td>
-    </tr>
-    <tr>
-      <th>230</th>
-      <td>volkswagen</td>
-      <td>passat</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>manual(m6)</td>
-      <td>f</td>
-      <td>21</td>
-      <td>29</td>
-      <td>p</td>
-      <td>midsize</td>
-    </tr>
-  </tbody>
-</table>
-<p>61 rows × 11 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># model 칼럼이 a4 quattro 혹은 a4인 경우 추출</span>
-<span class="n">mpg</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;model == &quot;a4 quattro&quot; | model == &quot;a4&quot;&#39;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[31]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>manufacturer</th>
-      <th>model</th>
-      <th>displ</th>
-      <th>year</th>
-      <th>cyl</th>
-      <th>trans</th>
-      <th>drv</th>
-      <th>cty</th>
-      <th>hwy</th>
-      <th>fl</th>
-      <th>category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>4</td>
-      <td>auto(l5)</td>
-      <td>f</td>
-      <td>18</td>
-      <td>29</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>4</td>
-      <td>manual(m5)</td>
-      <td>f</td>
-      <td>21</td>
-      <td>29</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>manual(m6)</td>
-      <td>f</td>
-      <td>20</td>
-      <td>31</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>auto(av)</td>
-      <td>f</td>
-      <td>21</td>
-      <td>30</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>6</td>
-      <td>auto(l5)</td>
-      <td>f</td>
-      <td>16</td>
-      <td>26</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>6</td>
-      <td>manual(m5)</td>
-      <td>f</td>
-      <td>18</td>
-      <td>26</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>3.1</td>
-      <td>2008</td>
-      <td>6</td>
-      <td>auto(av)</td>
-      <td>f</td>
-      <td>18</td>
-      <td>27</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>audi</td>
-      <td>a4 quattro</td>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>4</td>
-      <td>manual(m5)</td>
-      <td>4</td>
-      <td>18</td>
-      <td>26</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>audi</td>
-      <td>a4 quattro</td>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>4</td>
-      <td>auto(l5)</td>
-      <td>4</td>
-      <td>16</td>
-      <td>25</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>audi</td>
-      <td>a4 quattro</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>manual(m6)</td>
-      <td>4</td>
-      <td>20</td>
-      <td>28</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>audi</td>
-      <td>a4 quattro</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>auto(s6)</td>
-      <td>4</td>
-      <td>19</td>
-      <td>27</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>audi</td>
-      <td>a4 quattro</td>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>6</td>
-      <td>auto(l5)</td>
-      <td>4</td>
-      <td>15</td>
-      <td>25</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>audi</td>
-      <td>a4 quattro</td>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>6</td>
-      <td>manual(m5)</td>
-      <td>4</td>
-      <td>17</td>
-      <td>25</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>audi</td>
-      <td>a4 quattro</td>
-      <td>3.1</td>
-      <td>2008</td>
-      <td>6</td>
-      <td>auto(s6)</td>
-      <td>4</td>
-      <td>17</td>
-      <td>25</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>audi</td>
-      <td>a4 quattro</td>
-      <td>3.1</td>
-      <td>2008</td>
-      <td>6</td>
-      <td>manual(m6)</td>
-      <td>4</td>
-      <td>15</td>
-      <td>25</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># manufacturer가 audi이고 model이 a4이고 category가 compact인 경우 추출하기</span>
-<span class="n">mpg</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;manufacturer==&quot;audi&quot; &amp; model==&quot;a4&quot; &amp; category==&quot;compact&quot;&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 구동방식별 배기량의 평균 구해라</span>
+<span class="n">mpg</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;drv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">mean_displ</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;displ&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -16075,117 +14794,25 @@ Name: manufacturer, dtype: int64</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>manufacturer</th>
-      <th>model</th>
-      <th>displ</th>
-      <th>year</th>
-      <th>cyl</th>
-      <th>trans</th>
+      <th>mean_displ</th>
+    </tr>
+    <tr>
       <th>drv</th>
-      <th>cty</th>
-      <th>hwy</th>
-      <th>fl</th>
-      <th>category</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>4</td>
-      <td>auto(l5)</td>
-      <td>f</td>
-      <td>18</td>
-      <td>29</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>4</td>
-      <td>manual(m5)</td>
-      <td>f</td>
-      <td>21</td>
-      <td>29</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>manual(m6)</td>
-      <td>f</td>
-      <td>20</td>
-      <td>31</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>auto(av)</td>
-      <td>f</td>
-      <td>21</td>
-      <td>30</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
       <th>4</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>6</td>
-      <td>auto(l5)</td>
-      <td>f</td>
-      <td>16</td>
-      <td>26</td>
-      <td>p</td>
-      <td>compact</td>
+      <td>3.998058</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>6</td>
-      <td>manual(m5)</td>
-      <td>f</td>
-      <td>18</td>
-      <td>26</td>
-      <td>p</td>
-      <td>compact</td>
+      <th>f</th>
+      <td>2.558491</td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>3.1</td>
-      <td>2008</td>
-      <td>6</td>
-      <td>auto(av)</td>
-      <td>f</td>
-      <td>18</td>
-      <td>27</td>
-      <td>p</td>
-      <td>compact</td>
+      <th>r</th>
+      <td>5.176000</td>
     </tr>
   </tbody>
 </table>
@@ -16201,11 +14828,11 @@ Name: manufacturer, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># drv가 r이고 fl이 p인 경우를 추출해라</span>
-<span class="n">mpg</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;drv==&quot;r&quot; | fl==&quot;p&quot;&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 변속기별 실린더 개수의 평균 (실린더 개수 기준 내림차순 정렬) 보여라</span>
+<span class="n">mpg</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;trans&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">mean_cyl</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;cyl&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;mean_cyl&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16221,7 +14848,7 @@ Name: manufacturer, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[72]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
 
 
 
@@ -16244,177 +14871,162 @@ Name: manufacturer, dtype: int64</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>manufacturer</th>
-      <th>model</th>
-      <th>displ</th>
-      <th>year</th>
-      <th>cyl</th>
+      <th>mean_cyl</th>
+    </tr>
+    <tr>
       <th>trans</th>
-      <th>drv</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>auto(l6)</th>
+      <td>7.333333</td>
+    </tr>
+    <tr>
+      <th>auto(l5)</th>
+      <td>6.564103</td>
+    </tr>
+    <tr>
+      <th>auto(l4)</th>
+      <td>6.144578</td>
+    </tr>
+    <tr>
+      <th>auto(s5)</th>
+      <td>6.000000</td>
+    </tr>
+    <tr>
+      <th>auto(s6)</th>
+      <td>6.000000</td>
+    </tr>
+    <tr>
+      <th>manual(m6)</th>
+      <td>6.000000</td>
+    </tr>
+    <tr>
+      <th>auto(s4)</th>
+      <td>5.333333</td>
+    </tr>
+    <tr>
+      <th>auto(av)</th>
+      <td>5.200000</td>
+    </tr>
+    <tr>
+      <th>manual(m5)</th>
+      <td>5.000000</td>
+    </tr>
+    <tr>
+      <th>auto(l3)</th>
+      <td>4.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 연료 종류별 시내주행연비와 고속주행연비의 최댓값 보여라 (인덱스 따로)</span>
+<span class="n">mpg</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;fl&#39;</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s1">&#39;cty&#39;</span><span class="p">,</span><span class="s1">&#39;hwy&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>&lt;ipython-input-34-eaf9de4d7b4a&gt;:2: FutureWarning: Indexing with multiple keys (implicitly converted to a tuple of keys) will be deprecated, use a list instead.
+  mpg.groupby(&#39;fl&#39;, as_index=False)[&#39;cty&#39;,&#39;hwy&#39;].max()
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[34]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>fl</th>
       <th>cty</th>
       <th>hwy</th>
-      <th>fl</th>
-      <th>category</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>4</td>
-      <td>auto(l5)</td>
-      <td>f</td>
-      <td>18</td>
-      <td>29</td>
-      <td>p</td>
-      <td>compact</td>
+      <td>c</td>
+      <td>24</td>
+      <td>36</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>4</td>
-      <td>manual(m5)</td>
-      <td>f</td>
-      <td>21</td>
-      <td>29</td>
-      <td>p</td>
-      <td>compact</td>
+      <td>d</td>
+      <td>35</td>
+      <td>44</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>manual(m6)</td>
-      <td>f</td>
-      <td>20</td>
-      <td>31</td>
-      <td>p</td>
-      <td>compact</td>
+      <td>e</td>
+      <td>11</td>
+      <td>17</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>auto(av)</td>
-      <td>f</td>
-      <td>21</td>
-      <td>30</td>
       <td>p</td>
-      <td>compact</td>
+      <td>23</td>
+      <td>31</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>6</td>
-      <td>auto(l5)</td>
-      <td>f</td>
-      <td>16</td>
-      <td>26</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>229</th>
-      <td>volkswagen</td>
-      <td>passat</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>auto(s6)</td>
-      <td>f</td>
-      <td>19</td>
+      <td>r</td>
       <td>28</td>
-      <td>p</td>
-      <td>midsize</td>
-    </tr>
-    <tr>
-      <th>230</th>
-      <td>volkswagen</td>
-      <td>passat</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>manual(m6)</td>
-      <td>f</td>
-      <td>21</td>
-      <td>29</td>
-      <td>p</td>
-      <td>midsize</td>
-    </tr>
-    <tr>
-      <th>231</th>
-      <td>volkswagen</td>
-      <td>passat</td>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>6</td>
-      <td>auto(l5)</td>
-      <td>f</td>
-      <td>16</td>
-      <td>26</td>
-      <td>p</td>
-      <td>midsize</td>
-    </tr>
-    <tr>
-      <th>232</th>
-      <td>volkswagen</td>
-      <td>passat</td>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>6</td>
-      <td>manual(m5)</td>
-      <td>f</td>
-      <td>18</td>
-      <td>26</td>
-      <td>p</td>
-      <td>midsize</td>
-    </tr>
-    <tr>
-      <th>233</th>
-      <td>volkswagen</td>
-      <td>passat</td>
-      <td>3.6</td>
-      <td>2008</td>
-      <td>6</td>
-      <td>auto(s6)</td>
-      <td>f</td>
-      <td>17</td>
-      <td>26</td>
-      <td>p</td>
-      <td>midsize</td>
+      <td>37</td>
     </tr>
   </tbody>
 </table>
-<p>70 rows × 11 columns</p>
 </div>
 </div>
 
@@ -16427,7 +15039,585 @@ Name: manufacturer, dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#48320;&#49688;-&#52628;&#52636;">&#48320;&#49688; &#52628;&#52636;<a class="anchor-link" href="#&#48320;&#49688;-&#52628;&#52636;">&#182;</a></h4>
+<ul>
+<li>모든 변수에 대한 요약통계</li>
+</ul>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpg</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;fl&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>displ</th>
+      <th>year</th>
+      <th>cyl</th>
+      <th>cty</th>
+      <th>hwy</th>
+    </tr>
+    <tr>
+      <th>fl</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>c</th>
+      <td>1.800000</td>
+      <td>2008.000000</td>
+      <td>4.000000</td>
+      <td>24.000000</td>
+      <td>36.000000</td>
+    </tr>
+    <tr>
+      <th>d</th>
+      <td>3.040000</td>
+      <td>2000.800000</td>
+      <td>5.200000</td>
+      <td>25.600000</td>
+      <td>33.600000</td>
+    </tr>
+    <tr>
+      <th>e</th>
+      <td>4.675000</td>
+      <td>2008.000000</td>
+      <td>7.750000</td>
+      <td>9.750000</td>
+      <td>13.250000</td>
+    </tr>
+    <tr>
+      <th>p</th>
+      <td>3.263462</td>
+      <td>2004.538462</td>
+      <td>5.653846</td>
+      <td>17.365385</td>
+      <td>25.230769</td>
+    </tr>
+    <tr>
+      <th>r</th>
+      <td>3.501786</td>
+      <td>2003.017857</td>
+      <td>5.904762</td>
+      <td>16.738095</td>
+      <td>22.994048</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># &#39;category&#39;별 &#39;displ&#39;, &#39;cyl&#39;, &#39;cty&#39;, &#39;hwy&#39; (수치형) 최소값을 보여라</span>
+<span class="n">mpg</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)[</span><span class="s1">&#39;displ&#39;</span><span class="p">,</span> <span class="s1">&#39;cyl&#39;</span><span class="p">,</span> <span class="s1">&#39;cty&#39;</span><span class="p">,</span> <span class="s1">&#39;hwy&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>&lt;ipython-input-44-bb12f3d53346&gt;:1: FutureWarning: Indexing with multiple keys (implicitly converted to a tuple of keys) will be deprecated, use a list instead.
+  mpg.groupby(&#39;category&#39;)[&#39;displ&#39;, &#39;cyl&#39;, &#39;cty&#39;, &#39;hwy&#39;].min()
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>displ</th>
+      <th>cyl</th>
+      <th>cty</th>
+      <th>hwy</th>
+    </tr>
+    <tr>
+      <th>category</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2seater</th>
+      <td>5.7</td>
+      <td>8</td>
+      <td>15</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>compact</th>
+      <td>1.8</td>
+      <td>4</td>
+      <td>15</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>midsize</th>
+      <td>1.8</td>
+      <td>4</td>
+      <td>15</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>minivan</th>
+      <td>2.4</td>
+      <td>4</td>
+      <td>11</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>pickup</th>
+      <td>2.7</td>
+      <td>4</td>
+      <td>9</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>subcompact</th>
+      <td>1.6</td>
+      <td>4</td>
+      <td>14</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>suv</th>
+      <td>2.5</td>
+      <td>4</td>
+      <td>9</td>
+      <td>12</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 제조사와 자동차 종류별 배기량의 평균을 보여라</span>
+<span class="n">mpg</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;manufacturer&#39;</span><span class="p">,</span> <span class="s1">&#39;category&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">mean_displ</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;displ&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>mean_displ</th>
+    </tr>
+    <tr>
+      <th>manufacturer</th>
+      <th>category</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">audi</th>
+      <th>compact</th>
+      <td>2.380000</td>
+    </tr>
+    <tr>
+      <th>midsize</th>
+      <td>3.366667</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">chevrolet</th>
+      <th>2seater</th>
+      <td>6.160000</td>
+    </tr>
+    <tr>
+      <th>midsize</th>
+      <td>3.000000</td>
+    </tr>
+    <tr>
+      <th>suv</th>
+      <td>5.600000</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">dodge</th>
+      <th>minivan</th>
+      <td>3.390909</td>
+    </tr>
+    <tr>
+      <th>pickup</th>
+      <td>4.731579</td>
+    </tr>
+    <tr>
+      <th>suv</th>
+      <td>4.971429</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">ford</th>
+      <th>pickup</th>
+      <td>4.714286</td>
+    </tr>
+    <tr>
+      <th>subcompact</th>
+      <td>4.377778</td>
+    </tr>
+    <tr>
+      <th>suv</th>
+      <td>4.555556</td>
+    </tr>
+    <tr>
+      <th>honda</th>
+      <th>subcompact</th>
+      <td>1.711111</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">hyundai</th>
+      <th>midsize</th>
+      <td>2.557143</td>
+    </tr>
+    <tr>
+      <th>subcompact</th>
+      <td>2.300000</td>
+    </tr>
+    <tr>
+      <th>jeep</th>
+      <th>suv</th>
+      <td>4.575000</td>
+    </tr>
+    <tr>
+      <th>land rover</th>
+      <th>suv</th>
+      <td>4.300000</td>
+    </tr>
+    <tr>
+      <th>lincoln</th>
+      <th>suv</th>
+      <td>5.400000</td>
+    </tr>
+    <tr>
+      <th>mercury</th>
+      <th>suv</th>
+      <td>4.400000</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">nissan</th>
+      <th>compact</th>
+      <td>2.400000</td>
+    </tr>
+    <tr>
+      <th>midsize</th>
+      <td>3.071429</td>
+    </tr>
+    <tr>
+      <th>suv</th>
+      <td>4.050000</td>
+    </tr>
+    <tr>
+      <th>pontiac</th>
+      <th>midsize</th>
+      <td>3.960000</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">subaru</th>
+      <th>compact</th>
+      <td>2.500000</td>
+    </tr>
+    <tr>
+      <th>subcompact</th>
+      <td>2.350000</td>
+    </tr>
+    <tr>
+      <th>suv</th>
+      <td>2.500000</td>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">toyota</th>
+      <th>compact</th>
+      <td>2.291667</td>
+    </tr>
+    <tr>
+      <th>midsize</th>
+      <td>2.671429</td>
+    </tr>
+    <tr>
+      <th>pickup</th>
+      <td>3.271429</td>
+    </tr>
+    <tr>
+      <th>suv</th>
+      <td>3.912500</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">volkswagen</th>
+      <th>compact</th>
+      <td>2.235714</td>
+    </tr>
+    <tr>
+      <th>midsize</th>
+      <td>2.400000</td>
+    </tr>
+    <tr>
+      <th>subcompact</th>
+      <td>2.133333</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 연료종류별 실린더수, 시내주행연비, 고속주행연비 보여라</span>
+<span class="n">mpg</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;fl&#39;</span><span class="p">)[</span><span class="s1">&#39;cyl&#39;</span><span class="p">,</span><span class="s1">&#39;cty&#39;</span><span class="p">,</span><span class="s1">&#39;hwy&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;cyl&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>&lt;ipython-input-15-5b2e6a391ebe&gt;:2: FutureWarning: Indexing with multiple keys (implicitly converted to a tuple of keys) will be deprecated, use a list instead.
+  mpg.groupby(&#39;fl&#39;)[&#39;cyl&#39;,&#39;cty&#39;,&#39;hwy&#39;].mean().sort_values(&#39;cyl&#39;)
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>cyl</th>
+      <th>cty</th>
+      <th>hwy</th>
+    </tr>
+    <tr>
+      <th>fl</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>c</th>
+      <td>4.000000</td>
+      <td>24.000000</td>
+      <td>36.000000</td>
+    </tr>
+    <tr>
+      <th>d</th>
+      <td>5.200000</td>
+      <td>25.600000</td>
+      <td>33.600000</td>
+    </tr>
+    <tr>
+      <th>p</th>
+      <td>5.653846</td>
+      <td>17.365385</td>
+      <td>25.230769</td>
+    </tr>
+    <tr>
+      <th>r</th>
+      <td>5.904762</td>
+      <td>16.738095</td>
+      <td>22.994048</td>
+    </tr>
+    <tr>
+      <th>e</th>
+      <td>7.750000</td>
+      <td>9.750000</td>
+      <td>13.250000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>query + groupby + agg</li>
+</ul>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -16435,8 +15625,8 @@ Name: manufacturer, dtype: int64</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># displ, year, drv, category 추출해라</span>
-<span class="n">mpg</span><span class="p">[[</span><span class="s1">&#39;displ&#39;</span><span class="p">,</span><span class="s1">&#39;year&#39;</span><span class="p">,</span><span class="s1">&#39;drv&#39;</span><span class="p">,</span><span class="s1">&#39;category&#39;</span><span class="p">]]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 제조년도가 2008년인 변속기별 실린더 개수의 평균</span>
+<span class="n">mpg</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;year== 2008&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;trans&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">min_cyl</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;cyl&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -16475,431 +15665,49 @@ Name: manufacturer, dtype: int64</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>displ</th>
-      <th>year</th>
-      <th>drv</th>
-      <th>category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>f</td>
-      <td>compact</td>
+      <th>min_cyl</th>
     </tr>
     <tr>
-      <th>1</th>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>f</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>f</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>f</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>f</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>229</th>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>f</td>
-      <td>midsize</td>
-    </tr>
-    <tr>
-      <th>230</th>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>f</td>
-      <td>midsize</td>
-    </tr>
-    <tr>
-      <th>231</th>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>f</td>
-      <td>midsize</td>
-    </tr>
-    <tr>
-      <th>232</th>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>f</td>
-      <td>midsize</td>
-    </tr>
-    <tr>
-      <th>233</th>
-      <td>3.6</td>
-      <td>2008</td>
-      <td>f</td>
-      <td>midsize</td>
-    </tr>
-  </tbody>
-</table>
-<p>234 rows × 4 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># displ, trans, drv, category를 컬럼으로 하는 new_mpg를 생성해라</span>
-<span class="n">new_mpg</span> <span class="o">=</span> <span class="n">mpg</span><span class="p">[[</span><span class="s1">&#39;displ&#39;</span><span class="p">,</span><span class="s1">&#39;trans&#39;</span><span class="p">,</span><span class="s1">&#39;drv&#39;</span><span class="p">,</span><span class="s1">&#39;category&#39;</span><span class="p">]]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_mpg</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[65]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>displ</th>
       <th>trans</th>
-      <th>drv</th>
-      <th>category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1.8</td>
-      <td>auto(l5)</td>
-      <td>f</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1.8</td>
-      <td>manual(m5)</td>
-      <td>f</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2.0</td>
-      <td>manual(m6)</td>
-      <td>f</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2.0</td>
-      <td>auto(av)</td>
-      <td>f</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2.8</td>
-      <td>auto(l5)</td>
-      <td>f</td>
-      <td>compact</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># new_mpg에서 category 제거해라</span>
-<span class="n">new_mpg</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;category&#39;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[66]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
       <th></th>
-      <th>displ</th>
-      <th>trans</th>
-      <th>drv</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>1.8</td>
-      <td>auto(l5)</td>
-      <td>f</td>
+      <th>auto(av)</th>
+      <td>5.200000</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>1.8</td>
-      <td>manual(m5)</td>
-      <td>f</td>
+      <th>auto(l4)</th>
+      <td>6.190476</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>2.0</td>
-      <td>manual(m6)</td>
-      <td>f</td>
+      <th>auto(l5)</th>
+      <td>6.965517</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>2.0</td>
-      <td>auto(av)</td>
-      <td>f</td>
+      <th>auto(l6)</th>
+      <td>7.333333</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>2.8</td>
-      <td>auto(l5)</td>
-      <td>f</td>
+      <th>auto(s4)</th>
+      <td>5.333333</td>
     </tr>
     <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
+      <th>auto(s5)</th>
+      <td>6.000000</td>
     </tr>
     <tr>
-      <th>229</th>
-      <td>2.0</td>
-      <td>auto(s6)</td>
-      <td>f</td>
+      <th>auto(s6)</th>
+      <td>6.000000</td>
     </tr>
     <tr>
-      <th>230</th>
-      <td>2.0</td>
-      <td>manual(m6)</td>
-      <td>f</td>
+      <th>manual(m5)</th>
+      <td>4.625000</td>
     </tr>
     <tr>
-      <th>231</th>
-      <td>2.8</td>
-      <td>auto(l5)</td>
-      <td>f</td>
-    </tr>
-    <tr>
-      <th>232</th>
-      <td>2.8</td>
-      <td>manual(m5)</td>
-      <td>f</td>
-    </tr>
-    <tr>
-      <th>233</th>
-      <td>3.6</td>
-      <td>auto(s6)</td>
-      <td>f</td>
-    </tr>
-  </tbody>
-</table>
-<p>234 rows × 3 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_mpg</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>   <span class="c1"># 원본 데이터는 변경되지 않음</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[68]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>displ</th>
-      <th>trans</th>
-      <th>drv</th>
-      <th>category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1.8</td>
-      <td>auto(l5)</td>
-      <td>f</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1.8</td>
-      <td>manual(m5)</td>
-      <td>f</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2.0</td>
-      <td>manual(m6)</td>
-      <td>f</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2.0</td>
-      <td>auto(av)</td>
-      <td>f</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2.8</td>
-      <td>auto(l5)</td>
-      <td>f</td>
-      <td>compact</td>
+      <th>manual(m6)</th>
+      <td>5.888889</td>
     </tr>
   </tbody>
 </table>
@@ -16912,19 +15720,14 @@ Name: manufacturer, dtype: int64</pre>
 
 </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="query(-)[-]">query( )[ ]<a class="anchor-link" href="#query(-)[-]">&#182;</a></h4>
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># drv가 f인 model, trans, fl을 추출해라</span>
-<span class="n">mpg</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;drv==&quot;f&quot;&#39;</span><span class="p">)[[</span><span class="s1">&#39;model&#39;</span><span class="p">,</span><span class="s1">&#39;trans&#39;</span><span class="p">,</span><span class="s1">&#39;fl&#39;</span><span class="p">]]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># &#39;manufacturer&#39; 가 &#39;toyota&#39; 인 데이터에서 &#39;model&#39; 별 cty의 최소값을 구해라</span>
+<span class="n">mpg</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;manufacturer==&#39;toyota&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;model&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">min_cty</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;cty&#39;</span><span class="p">,</span> <span class="s1">&#39;min&#39;</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -16963,81 +15766,40 @@ Name: manufacturer, dtype: int64</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>min_cty</th>
+    </tr>
+    <tr>
       <th>model</th>
-      <th>trans</th>
-      <th>fl</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>a4</td>
-      <td>auto(l5)</td>
-      <td>p</td>
+      <th>4runner 4wd</th>
+      <td>14</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>a4</td>
-      <td>manual(m5)</td>
-      <td>p</td>
+      <th>camry</th>
+      <td>18</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>a4</td>
-      <td>manual(m6)</td>
-      <td>p</td>
+      <th>camry solara</th>
+      <td>18</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>a4</td>
-      <td>auto(av)</td>
-      <td>p</td>
+      <th>corolla</th>
+      <td>24</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>a4</td>
-      <td>auto(l5)</td>
-      <td>p</td>
+      <th>land cruiser wagon 4wd</th>
+      <td>11</td>
     </tr>
     <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>229</th>
-      <td>passat</td>
-      <td>auto(s6)</td>
-      <td>p</td>
-    </tr>
-    <tr>
-      <th>230</th>
-      <td>passat</td>
-      <td>manual(m6)</td>
-      <td>p</td>
-    </tr>
-    <tr>
-      <th>231</th>
-      <td>passat</td>
-      <td>auto(l5)</td>
-      <td>p</td>
-    </tr>
-    <tr>
-      <th>232</th>
-      <td>passat</td>
-      <td>manual(m5)</td>
-      <td>p</td>
-    </tr>
-    <tr>
-      <th>233</th>
-      <td>passat</td>
-      <td>auto(s6)</td>
-      <td>p</td>
+      <th>toyota tacoma 4wd</th>
+      <td>15</td>
     </tr>
   </tbody>
 </table>
-<p>106 rows × 3 columns</p>
 </div>
 </div>
 
@@ -17047,14 +15809,21 @@ Name: manufacturer, dtype: int64</pre>
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="&#45936;&#51060;&#53552;-&#48337;&#54633;">&#45936;&#51060;&#53552; &#48337;&#54633;<a class="anchor-link" href="#&#45936;&#51060;&#53552;-&#48337;&#54633;">&#182;</a></h3><ul>
+<li>merge, concat ( join 이용 )</li>
+</ul>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># displ이 4 이하인 model, manufacturer, trans를 구해라</span>
-<span class="n">mpg</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;displ&lt;=4&#39;</span><span class="p">)[[</span><span class="s1">&#39;model&#39;</span><span class="p">,</span><span class="s1">&#39;manufacturer&#39;</span><span class="p">,</span><span class="s1">&#39;trans&#39;</span><span class="p">]]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpg</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -17093,869 +15862,89 @@ Name: manufacturer, dtype: int64</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>model</th>
       <th>manufacturer</th>
+      <th>model</th>
+      <th>displ</th>
+      <th>year</th>
+      <th>cyl</th>
       <th>trans</th>
+      <th>drv</th>
+      <th>cty</th>
+      <th>hwy</th>
+      <th>fl</th>
+      <th>category</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>a4</td>
       <td>audi</td>
+      <td>a4</td>
+      <td>1.8</td>
+      <td>1999</td>
+      <td>4</td>
       <td>auto(l5)</td>
+      <td>f</td>
+      <td>18</td>
+      <td>29</td>
+      <td>p</td>
+      <td>compact</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>a4</td>
       <td>audi</td>
+      <td>a4</td>
+      <td>1.8</td>
+      <td>1999</td>
+      <td>4</td>
       <td>manual(m5)</td>
+      <td>f</td>
+      <td>21</td>
+      <td>29</td>
+      <td>p</td>
+      <td>compact</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>a4</td>
-      <td>audi</td>
-      <td>manual(m6)</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>a4</td>
-      <td>audi</td>
-      <td>auto(av)</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>a4</td>
-      <td>audi</td>
-      <td>auto(l5)</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>229</th>
-      <td>passat</td>
-      <td>volkswagen</td>
-      <td>auto(s6)</td>
-    </tr>
-    <tr>
-      <th>230</th>
-      <td>passat</td>
-      <td>volkswagen</td>
-      <td>manual(m6)</td>
-    </tr>
-    <tr>
-      <th>231</th>
-      <td>passat</td>
-      <td>volkswagen</td>
-      <td>auto(l5)</td>
-    </tr>
-    <tr>
-      <th>232</th>
-      <td>passat</td>
-      <td>volkswagen</td>
-      <td>manual(m5)</td>
-    </tr>
-    <tr>
-      <th>233</th>
-      <td>passat</td>
-      <td>volkswagen</td>
-      <td>auto(s6)</td>
-    </tr>
-  </tbody>
-</table>
-<p>163 rows × 3 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># manufacterer가 toyota인 cty, hwy를 구해라</span>
-<span class="n">mpg</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;manufacturer==&quot;toyota&quot;&#39;</span><span class="p">)[[</span><span class="s1">&#39;cty&#39;</span><span class="p">,</span> <span class="s1">&#39;hwy&#39;</span><span class="p">]]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[57]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>cty</th>
-      <th>hwy</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>173</th>
-      <td>15</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>174</th>
-      <td>16</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>175</th>
-      <td>15</td>
-      <td>19</td>
-    </tr>
-    <tr>
-      <th>176</th>
-      <td>15</td>
-      <td>17</td>
-    </tr>
-    <tr>
-      <th>177</th>
-      <td>16</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>178</th>
-      <td>14</td>
-      <td>17</td>
-    </tr>
-    <tr>
-      <th>179</th>
-      <td>21</td>
-      <td>29</td>
-    </tr>
-    <tr>
-      <th>180</th>
-      <td>21</td>
-      <td>27</td>
-    </tr>
-    <tr>
-      <th>181</th>
-      <td>21</td>
-      <td>31</td>
-    </tr>
-    <tr>
-      <th>182</th>
-      <td>21</td>
-      <td>31</td>
-    </tr>
-    <tr>
-      <th>183</th>
-      <td>18</td>
-      <td>26</td>
-    </tr>
-    <tr>
-      <th>184</th>
-      <td>18</td>
-      <td>26</td>
-    </tr>
-    <tr>
-      <th>185</th>
-      <td>19</td>
-      <td>28</td>
-    </tr>
-    <tr>
-      <th>186</th>
-      <td>21</td>
-      <td>27</td>
-    </tr>
-    <tr>
-      <th>187</th>
-      <td>21</td>
-      <td>29</td>
-    </tr>
-    <tr>
-      <th>188</th>
-      <td>21</td>
-      <td>31</td>
-    </tr>
-    <tr>
-      <th>189</th>
-      <td>22</td>
-      <td>31</td>
-    </tr>
-    <tr>
-      <th>190</th>
-      <td>18</td>
-      <td>26</td>
-    </tr>
-    <tr>
-      <th>191</th>
-      <td>18</td>
-      <td>26</td>
-    </tr>
-    <tr>
-      <th>192</th>
-      <td>18</td>
-      <td>27</td>
-    </tr>
-    <tr>
-      <th>193</th>
-      <td>24</td>
-      <td>30</td>
-    </tr>
-    <tr>
-      <th>194</th>
-      <td>24</td>
-      <td>33</td>
-    </tr>
-    <tr>
-      <th>195</th>
-      <td>26</td>
-      <td>35</td>
-    </tr>
-    <tr>
-      <th>196</th>
-      <td>28</td>
-      <td>37</td>
-    </tr>
-    <tr>
-      <th>197</th>
-      <td>26</td>
-      <td>35</td>
-    </tr>
-    <tr>
-      <th>198</th>
-      <td>11</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <th>199</th>
-      <td>13</td>
-      <td>18</td>
-    </tr>
-    <tr>
-      <th>200</th>
-      <td>15</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>201</th>
-      <td>16</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>202</th>
-      <td>17</td>
-      <td>22</td>
-    </tr>
-    <tr>
-      <th>203</th>
-      <td>15</td>
-      <td>17</td>
-    </tr>
-    <tr>
-      <th>204</th>
-      <td>15</td>
-      <td>19</td>
-    </tr>
-    <tr>
-      <th>205</th>
-      <td>15</td>
-      <td>18</td>
-    </tr>
-    <tr>
-      <th>206</th>
-      <td>16</td>
-      <td>20</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="sort_values(-)-&#51221;&#47148;">sort_values( ) &#51221;&#47148;<a class="anchor-link" href="#sort_values(-)-&#51221;&#47148;">&#182;</a></h4>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># year기준 오름차순 정렬</span>
-<span class="n">mpg</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[55]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>manufacturer</th>
-      <th>model</th>
-      <th>displ</th>
-      <th>year</th>
-      <th>cyl</th>
-      <th>trans</th>
-      <th>drv</th>
-      <th>cty</th>
-      <th>hwy</th>
-      <th>fl</th>
-      <th>category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
       <td>audi</td>
       <td>a4</td>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>4</td>
-      <td>auto(l5)</td>
-      <td>f</td>
-      <td>18</td>
-      <td>29</td>
-      <td>p</td>
-      <td>compact</td>
-    </tr>
-    <tr>
-      <th>125</th>
-      <td>jeep</td>
-      <td>grand cherokee 4wd</td>
-      <td>4.7</td>
-      <td>1999</td>
-      <td>8</td>
-      <td>auto(l4)</td>
-      <td>4</td>
-      <td>14</td>
-      <td>17</td>
-      <td>r</td>
-      <td>suv</td>
-    </tr>
-    <tr>
-      <th>130</th>
-      <td>land rover</td>
-      <td>range rover</td>
-      <td>4.0</td>
-      <td>1999</td>
-      <td>8</td>
-      <td>auto(l4)</td>
-      <td>4</td>
-      <td>11</td>
-      <td>15</td>
-      <td>p</td>
-      <td>suv</td>
-    </tr>
-    <tr>
-      <th>133</th>
-      <td>land rover</td>
-      <td>range rover</td>
-      <td>4.6</td>
-      <td>1999</td>
-      <td>8</td>
-      <td>auto(l4)</td>
-      <td>4</td>
-      <td>11</td>
-      <td>15</td>
-      <td>p</td>
-      <td>suv</td>
-    </tr>
-    <tr>
-      <th>134</th>
-      <td>lincoln</td>
-      <td>navigator 2wd</td>
-      <td>5.4</td>
-      <td>1999</td>
-      <td>8</td>
-      <td>auto(l4)</td>
-      <td>r</td>
-      <td>11</td>
-      <td>17</td>
-      <td>r</td>
-      <td>suv</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>128</th>
-      <td>jeep</td>
-      <td>grand cherokee 4wd</td>
-      <td>5.7</td>
-      <td>2008</td>
-      <td>8</td>
-      <td>auto(l5)</td>
-      <td>4</td>
-      <td>13</td>
-      <td>18</td>
-      <td>r</td>
-      <td>suv</td>
-    </tr>
-    <tr>
-      <th>127</th>
-      <td>jeep</td>
-      <td>grand cherokee 4wd</td>
-      <td>4.7</td>
-      <td>2008</td>
-      <td>8</td>
-      <td>auto(l5)</td>
-      <td>4</td>
-      <td>14</td>
-      <td>19</td>
-      <td>r</td>
-      <td>suv</td>
-    </tr>
-    <tr>
-      <th>126</th>
-      <td>jeep</td>
-      <td>grand cherokee 4wd</td>
-      <td>4.7</td>
-      <td>2008</td>
-      <td>8</td>
-      <td>auto(l5)</td>
-      <td>4</td>
-      <td>9</td>
-      <td>12</td>
-      <td>e</td>
-      <td>suv</td>
-    </tr>
-    <tr>
-      <th>144</th>
-      <td>nissan</td>
-      <td>altima</td>
-      <td>2.5</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>manual(m6)</td>
-      <td>f</td>
-      <td>23</td>
-      <td>32</td>
-      <td>r</td>
-      <td>midsize</td>
-    </tr>
-    <tr>
-      <th>233</th>
-      <td>volkswagen</td>
-      <td>passat</td>
-      <td>3.6</td>
-      <td>2008</td>
-      <td>6</td>
-      <td>auto(s6)</td>
-      <td>f</td>
-      <td>17</td>
-      <td>26</td>
-      <td>p</td>
-      <td>midsize</td>
-    </tr>
-  </tbody>
-</table>
-<p>234 rows × 11 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># year기준 내림차순으로 정렬해라</span>
-<span class="n">mpg</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[54]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>manufacturer</th>
-      <th>model</th>
-      <th>displ</th>
-      <th>year</th>
-      <th>cyl</th>
-      <th>trans</th>
-      <th>drv</th>
-      <th>cty</th>
-      <th>hwy</th>
-      <th>fl</th>
-      <th>category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>117</th>
-      <td>hyundai</td>
-      <td>tiburon</td>
       <td>2.0</td>
       <td>2008</td>
       <td>4</td>
-      <td>manual(m5)</td>
-      <td>f</td>
-      <td>20</td>
-      <td>28</td>
-      <td>r</td>
-      <td>subcompact</td>
-    </tr>
-    <tr>
-      <th>120</th>
-      <td>hyundai</td>
-      <td>tiburon</td>
-      <td>2.7</td>
-      <td>2008</td>
-      <td>6</td>
       <td>manual(m6)</td>
       <td>f</td>
-      <td>16</td>
-      <td>24</td>
-      <td>r</td>
-      <td>subcompact</td>
-    </tr>
-    <tr>
-      <th>122</th>
-      <td>jeep</td>
-      <td>grand cherokee 4wd</td>
-      <td>3.0</td>
-      <td>2008</td>
-      <td>6</td>
-      <td>auto(l5)</td>
-      <td>4</td>
-      <td>17</td>
-      <td>22</td>
-      <td>d</td>
-      <td>suv</td>
-    </tr>
-    <tr>
-      <th>123</th>
-      <td>jeep</td>
-      <td>grand cherokee 4wd</td>
-      <td>3.7</td>
-      <td>2008</td>
-      <td>6</td>
-      <td>auto(l5)</td>
-      <td>4</td>
-      <td>15</td>
-      <td>19</td>
-      <td>r</td>
-      <td>suv</td>
-    </tr>
-    <tr>
-      <th>126</th>
-      <td>jeep</td>
-      <td>grand cherokee 4wd</td>
-      <td>4.7</td>
-      <td>2008</td>
-      <td>8</td>
-      <td>auto(l5)</td>
-      <td>4</td>
-      <td>9</td>
-      <td>12</td>
-      <td>e</td>
-      <td>suv</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>130</th>
-      <td>land rover</td>
-      <td>range rover</td>
-      <td>4.0</td>
-      <td>1999</td>
-      <td>8</td>
-      <td>auto(l4)</td>
-      <td>4</td>
-      <td>11</td>
-      <td>15</td>
-      <td>p</td>
-      <td>suv</td>
-    </tr>
-    <tr>
-      <th>50</th>
-      <td>dodge</td>
-      <td>dakota pickup 4wd</td>
-      <td>3.9</td>
-      <td>1999</td>
-      <td>6</td>
-      <td>auto(l4)</td>
-      <td>4</td>
-      <td>13</td>
-      <td>17</td>
-      <td>r</td>
-      <td>pickup</td>
-    </tr>
-    <tr>
-      <th>51</th>
-      <td>dodge</td>
-      <td>dakota pickup 4wd</td>
-      <td>3.9</td>
-      <td>1999</td>
-      <td>6</td>
-      <td>manual(m5)</td>
-      <td>4</td>
-      <td>14</td>
-      <td>17</td>
-      <td>r</td>
-      <td>pickup</td>
-    </tr>
-    <tr>
-      <th>125</th>
-      <td>jeep</td>
-      <td>grand cherokee 4wd</td>
-      <td>4.7</td>
-      <td>1999</td>
-      <td>8</td>
-      <td>auto(l4)</td>
-      <td>4</td>
-      <td>14</td>
-      <td>17</td>
-      <td>r</td>
-      <td>suv</td>
-    </tr>
-    <tr>
-      <th>0</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>4</td>
-      <td>auto(l5)</td>
-      <td>f</td>
-      <td>18</td>
-      <td>29</td>
+      <td>20</td>
+      <td>31</td>
       <td>p</td>
       <td>compact</td>
     </tr>
-  </tbody>
-</table>
-<p>234 rows × 11 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#fl이 e인 category와 cyl을 추출해라 (cyl기준 오름차순 정렬)</span>
-<span class="n">mpg</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;fl==&quot;e&quot;&#39;</span><span class="p">)[[</span><span class="s1">&#39;category&#39;</span><span class="p">,</span> <span class="s1">&#39;cyl&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;cyl&#39;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[73]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>category</th>
-      <th>cyl</th>
-    </tr>
-  </thead>
-  <tbody>
     <tr>
-      <th>43</th>
-      <td>minivan</td>
+      <th>3</th>
+      <td>audi</td>
+      <td>a4</td>
+      <td>2.0</td>
+      <td>2008</td>
+      <td>4</td>
+      <td>auto(av)</td>
+      <td>f</td>
+      <td>21</td>
+      <td>30</td>
+      <td>p</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>audi</td>
+      <td>a4</td>
+      <td>2.8</td>
+      <td>1999</td>
       <td>6</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>suv</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>suv</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>54</th>
-      <td>pickup</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>59</th>
-      <td>suv</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>65</th>
-      <td>pickup</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>69</th>
-      <td>pickup</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>126</th>
-      <td>suv</td>
-      <td>8</td>
+      <td>auto(l5)</td>
+      <td>f</td>
+      <td>16</td>
+      <td>26</td>
+      <td>p</td>
+      <td>compact</td>
     </tr>
   </tbody>
 </table>
@@ -17971,16 +15960,32 @@ Name: manufacturer, dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#54028;&#49373;&#48320;&#49688;-&#47564;&#46308;&#44592;">&#54028;&#49373;&#48320;&#49688; &#47564;&#46308;&#44592;<a class="anchor-link" href="#&#54028;&#49373;&#48320;&#49688;-&#47564;&#46308;&#44592;">&#182;</a></h4>
+<ul>
+<li>결합할 데이터 mpg_1, mpg_2 생성 </li>
+</ul>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[74]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 파생변수 total(cty+hwy) 만들기</span>
-<span class="n">mpg</span><span class="p">[</span><span class="s1">&#39;total&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mpg</span><span class="p">[</span><span class="s1">&#39;cty&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">mpg</span><span class="p">[</span><span class="s1">&#39;hwy&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpg_1</span> <span class="o">=</span> <span class="n">mpg</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;manufacturer == &quot;audi&quot;&#39;</span><span class="p">)[[</span><span class="s1">&#39;trans&#39;</span><span class="p">,</span> <span class="s1">&#39;drv&#39;</span><span class="p">,</span> <span class="s1">&#39;cty&#39;</span><span class="p">,</span> <span class="s1">&#39;hwy&#39;</span><span class="p">,</span> <span class="s1">&#39;category&#39;</span><span class="p">]]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpg_2</span> <span class="o">=</span> <span class="n">mpg</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;manufacturer==&quot;volkswagen&quot;&#39;</span><span class="p">)[[</span><span class="s1">&#39;trans&#39;</span><span class="p">,</span> <span class="s1">&#39;drv&#39;</span><span class="p">,</span> <span class="s1">&#39;cty&#39;</span><span class="p">,</span> <span class="s1">&#39;hwy&#39;</span><span class="p">,</span> <span class="s1">&#39;category&#39;</span><span class="p">]]</span>
 </pre></div>
 
      </div>
@@ -17991,10 +15996,11 @@ Name: manufacturer, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[75]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[67]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpg</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># mpg_1, mpg2 병합</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">mpg_1</span><span class="p">,</span> <span class="n">mpg_2</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -18010,7 +16016,7 @@ Name: manufacturer, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[75]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[67]:</div>
 
 
 
@@ -18033,323 +16039,376 @@ Name: manufacturer, dtype: int64</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>manufacturer</th>
-      <th>model</th>
-      <th>displ</th>
-      <th>year</th>
-      <th>cyl</th>
       <th>trans</th>
       <th>drv</th>
       <th>cty</th>
       <th>hwy</th>
-      <th>fl</th>
-      <th>category</th>
-      <th>total</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>4</td>
-      <td>auto(l5)</td>
-      <td>f</td>
-      <td>18</td>
-      <td>29</td>
-      <td>p</td>
-      <td>compact</td>
-      <td>47</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>4</td>
-      <td>manual(m5)</td>
-      <td>f</td>
-      <td>21</td>
-      <td>29</td>
-      <td>p</td>
-      <td>compact</td>
-      <td>50</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>manual(m6)</td>
-      <td>f</td>
-      <td>20</td>
-      <td>31</td>
-      <td>p</td>
-      <td>compact</td>
-      <td>51</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>auto(av)</td>
-      <td>f</td>
-      <td>21</td>
-      <td>30</td>
-      <td>p</td>
-      <td>compact</td>
-      <td>51</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>6</td>
-      <td>auto(l5)</td>
-      <td>f</td>
-      <td>16</td>
-      <td>26</td>
-      <td>p</td>
-      <td>compact</td>
-      <td>42</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[76]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpg</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;total&#39;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[76]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>manufacturer</th>
-      <th>model</th>
-      <th>displ</th>
-      <th>year</th>
-      <th>cyl</th>
-      <th>trans</th>
-      <th>drv</th>
-      <th>cty</th>
-      <th>hwy</th>
-      <th>fl</th>
       <th>category</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>4</td>
       <td>auto(l5)</td>
       <td>f</td>
       <td>18</td>
       <td>29</td>
-      <td>p</td>
       <td>compact</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>4</td>
       <td>manual(m5)</td>
       <td>f</td>
       <td>21</td>
       <td>29</td>
-      <td>p</td>
       <td>compact</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
       <td>manual(m6)</td>
       <td>f</td>
       <td>20</td>
       <td>31</td>
-      <td>p</td>
       <td>compact</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
       <td>auto(av)</td>
       <td>f</td>
       <td>21</td>
       <td>30</td>
-      <td>p</td>
       <td>compact</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>6</td>
       <td>auto(l5)</td>
       <td>f</td>
       <td>16</td>
       <td>26</td>
-      <td>p</td>
       <td>compact</td>
     </tr>
     <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
+      <th>5</th>
+      <td>manual(m5)</td>
+      <td>f</td>
+      <td>18</td>
+      <td>26</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>auto(av)</td>
+      <td>f</td>
+      <td>18</td>
+      <td>27</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>manual(m5)</td>
+      <td>4</td>
+      <td>18</td>
+      <td>26</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>auto(l5)</td>
+      <td>4</td>
+      <td>16</td>
+      <td>25</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>manual(m6)</td>
+      <td>4</td>
+      <td>20</td>
+      <td>28</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>auto(s6)</td>
+      <td>4</td>
+      <td>19</td>
+      <td>27</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>auto(l5)</td>
+      <td>4</td>
+      <td>15</td>
+      <td>25</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>manual(m5)</td>
+      <td>4</td>
+      <td>17</td>
+      <td>25</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>auto(s6)</td>
+      <td>4</td>
+      <td>17</td>
+      <td>25</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>manual(m6)</td>
+      <td>4</td>
+      <td>15</td>
+      <td>25</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>auto(l5)</td>
+      <td>4</td>
+      <td>15</td>
+      <td>24</td>
+      <td>midsize</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>auto(s6)</td>
+      <td>4</td>
+      <td>17</td>
+      <td>25</td>
+      <td>midsize</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>auto(s6)</td>
+      <td>4</td>
+      <td>16</td>
+      <td>23</td>
+      <td>midsize</td>
+    </tr>
+    <tr>
+      <th>207</th>
+      <td>manual(m5)</td>
+      <td>f</td>
+      <td>21</td>
+      <td>29</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>208</th>
+      <td>auto(l4)</td>
+      <td>f</td>
+      <td>19</td>
+      <td>26</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>209</th>
+      <td>manual(m6)</td>
+      <td>f</td>
+      <td>21</td>
+      <td>29</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>210</th>
+      <td>auto(s6)</td>
+      <td>f</td>
+      <td>22</td>
+      <td>29</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>211</th>
+      <td>manual(m5)</td>
+      <td>f</td>
+      <td>17</td>
+      <td>24</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>212</th>
+      <td>manual(m5)</td>
+      <td>f</td>
+      <td>33</td>
+      <td>44</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>213</th>
+      <td>manual(m5)</td>
+      <td>f</td>
+      <td>21</td>
+      <td>29</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>214</th>
+      <td>auto(l4)</td>
+      <td>f</td>
+      <td>19</td>
+      <td>26</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>215</th>
+      <td>auto(s6)</td>
+      <td>f</td>
+      <td>22</td>
+      <td>29</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>216</th>
+      <td>manual(m6)</td>
+      <td>f</td>
+      <td>21</td>
+      <td>29</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>217</th>
+      <td>auto(s6)</td>
+      <td>f</td>
+      <td>21</td>
+      <td>29</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>218</th>
+      <td>manual(m5)</td>
+      <td>f</td>
+      <td>21</td>
+      <td>29</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>219</th>
+      <td>auto(l4)</td>
+      <td>f</td>
+      <td>16</td>
+      <td>23</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>220</th>
+      <td>manual(m5)</td>
+      <td>f</td>
+      <td>17</td>
+      <td>24</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>221</th>
+      <td>manual(m5)</td>
+      <td>f</td>
+      <td>35</td>
+      <td>44</td>
+      <td>subcompact</td>
+    </tr>
+    <tr>
+      <th>222</th>
+      <td>auto(l4)</td>
+      <td>f</td>
+      <td>29</td>
+      <td>41</td>
+      <td>subcompact</td>
+    </tr>
+    <tr>
+      <th>223</th>
+      <td>manual(m5)</td>
+      <td>f</td>
+      <td>21</td>
+      <td>29</td>
+      <td>subcompact</td>
+    </tr>
+    <tr>
+      <th>224</th>
+      <td>auto(l4)</td>
+      <td>f</td>
+      <td>19</td>
+      <td>26</td>
+      <td>subcompact</td>
+    </tr>
+    <tr>
+      <th>225</th>
+      <td>manual(m5)</td>
+      <td>f</td>
+      <td>20</td>
+      <td>28</td>
+      <td>subcompact</td>
+    </tr>
+    <tr>
+      <th>226</th>
+      <td>auto(s6)</td>
+      <td>f</td>
+      <td>20</td>
+      <td>29</td>
+      <td>subcompact</td>
+    </tr>
+    <tr>
+      <th>227</th>
+      <td>manual(m5)</td>
+      <td>f</td>
+      <td>21</td>
+      <td>29</td>
+      <td>midsize</td>
+    </tr>
+    <tr>
+      <th>228</th>
+      <td>auto(l5)</td>
+      <td>f</td>
+      <td>18</td>
+      <td>29</td>
+      <td>midsize</td>
     </tr>
     <tr>
       <th>229</th>
-      <td>volkswagen</td>
-      <td>passat</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
       <td>auto(s6)</td>
       <td>f</td>
       <td>19</td>
       <td>28</td>
-      <td>p</td>
       <td>midsize</td>
     </tr>
     <tr>
       <th>230</th>
-      <td>volkswagen</td>
-      <td>passat</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
       <td>manual(m6)</td>
       <td>f</td>
       <td>21</td>
       <td>29</td>
-      <td>p</td>
       <td>midsize</td>
     </tr>
     <tr>
       <th>231</th>
-      <td>volkswagen</td>
-      <td>passat</td>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>6</td>
       <td>auto(l5)</td>
       <td>f</td>
       <td>16</td>
       <td>26</td>
-      <td>p</td>
       <td>midsize</td>
     </tr>
     <tr>
       <th>232</th>
-      <td>volkswagen</td>
-      <td>passat</td>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>6</td>
       <td>manual(m5)</td>
       <td>f</td>
       <td>18</td>
       <td>26</td>
-      <td>p</td>
       <td>midsize</td>
     </tr>
     <tr>
       <th>233</th>
-      <td>volkswagen</td>
-      <td>passat</td>
-      <td>3.6</td>
-      <td>2008</td>
-      <td>6</td>
       <td>auto(s6)</td>
       <td>f</td>
       <td>17</td>
       <td>26</td>
-      <td>p</td>
       <td>midsize</td>
     </tr>
   </tbody>
 </table>
-<p>234 rows × 11 columns</p>
 </div>
 </div>
 
@@ -18365,8 +16424,8 @@ Name: manufacturer, dtype: int64</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[77]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># hwy와 cty의 합을 hwct_sum이라는 파생변수로 만들어라</span>
-<span class="n">mpg</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">hwct_sum</span><span class="o">=</span><span class="n">mpg</span><span class="p">[</span><span class="s1">&#39;hwy&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">mpg</span><span class="p">[</span><span class="s1">&#39;cty&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># category 기준으로 교집합 추출</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">mpg_1</span><span class="p">,</span> <span class="n">mpg_2</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;category&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -18405,101 +16464,77 @@ Name: manufacturer, dtype: int64</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>manufacturer</th>
-      <th>model</th>
-      <th>displ</th>
-      <th>year</th>
-      <th>cyl</th>
-      <th>trans</th>
-      <th>drv</th>
-      <th>cty</th>
-      <th>hwy</th>
-      <th>fl</th>
+      <th>trans_x</th>
+      <th>drv_x</th>
+      <th>cty_x</th>
+      <th>hwy_x</th>
       <th>category</th>
-      <th>total</th>
-      <th>hwct_sum</th>
+      <th>trans_y</th>
+      <th>drv_y</th>
+      <th>cty_y</th>
+      <th>hwy_y</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>4</td>
       <td>auto(l5)</td>
       <td>f</td>
       <td>18</td>
       <td>29</td>
-      <td>p</td>
       <td>compact</td>
-      <td>47</td>
-      <td>47</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>1.8</td>
-      <td>1999</td>
-      <td>4</td>
       <td>manual(m5)</td>
       <td>f</td>
       <td>21</td>
       <td>29</td>
-      <td>p</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>auto(l5)</td>
+      <td>f</td>
+      <td>18</td>
+      <td>29</td>
       <td>compact</td>
-      <td>50</td>
-      <td>50</td>
+      <td>auto(l4)</td>
+      <td>f</td>
+      <td>19</td>
+      <td>26</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
+      <td>auto(l5)</td>
+      <td>f</td>
+      <td>18</td>
+      <td>29</td>
+      <td>compact</td>
       <td>manual(m6)</td>
       <td>f</td>
-      <td>20</td>
-      <td>31</td>
-      <td>p</td>
-      <td>compact</td>
-      <td>51</td>
-      <td>51</td>
+      <td>21</td>
+      <td>29</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>auto(av)</td>
+      <td>auto(l5)</td>
       <td>f</td>
-      <td>21</td>
-      <td>30</td>
-      <td>p</td>
+      <td>18</td>
+      <td>29</td>
       <td>compact</td>
-      <td>51</td>
-      <td>51</td>
+      <td>auto(s6)</td>
+      <td>f</td>
+      <td>22</td>
+      <td>29</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>audi</td>
-      <td>a4</td>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>6</td>
       <td>auto(l5)</td>
       <td>f</td>
-      <td>16</td>
-      <td>26</td>
-      <td>p</td>
+      <td>18</td>
+      <td>29</td>
       <td>compact</td>
-      <td>42</td>
-      <td>42</td>
+      <td>manual(m5)</td>
+      <td>f</td>
+      <td>17</td>
+      <td>24</td>
     </tr>
     <tr>
       <th>...</th>
@@ -18509,6 +16544,694 @@ Name: manufacturer, dtype: int64</pre>
       <td>...</td>
       <td>...</td>
       <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>226</th>
+      <td>auto(s6)</td>
+      <td>4</td>
+      <td>16</td>
+      <td>23</td>
+      <td>midsize</td>
+      <td>auto(s6)</td>
+      <td>f</td>
+      <td>19</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>227</th>
+      <td>auto(s6)</td>
+      <td>4</td>
+      <td>16</td>
+      <td>23</td>
+      <td>midsize</td>
+      <td>manual(m6)</td>
+      <td>f</td>
+      <td>21</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th>228</th>
+      <td>auto(s6)</td>
+      <td>4</td>
+      <td>16</td>
+      <td>23</td>
+      <td>midsize</td>
+      <td>auto(l5)</td>
+      <td>f</td>
+      <td>16</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>229</th>
+      <td>auto(s6)</td>
+      <td>4</td>
+      <td>16</td>
+      <td>23</td>
+      <td>midsize</td>
+      <td>manual(m5)</td>
+      <td>f</td>
+      <td>18</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>230</th>
+      <td>auto(s6)</td>
+      <td>4</td>
+      <td>16</td>
+      <td>23</td>
+      <td>midsize</td>
+      <td>auto(s6)</td>
+      <td>f</td>
+      <td>17</td>
+      <td>26</td>
+    </tr>
+  </tbody>
+</table>
+<p>231 rows × 9 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 기준에 drv 추가 -&gt; drv, category 둘 다 동일해야 함</span>
+<span class="n">mpg_3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">mpg_1</span><span class="p">,</span> <span class="n">mpg_2</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;category&#39;</span><span class="p">,</span> <span class="s1">&#39;drv&#39;</span><span class="p">])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpg_3</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[73]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>trans_x</th>
+      <th>drv</th>
+      <th>cty_x</th>
+      <th>hwy_x</th>
+      <th>category</th>
+      <th>trans_y</th>
+      <th>cty_y</th>
+      <th>hwy_y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>auto(l5)</td>
+      <td>f</td>
+      <td>18</td>
+      <td>29</td>
+      <td>compact</td>
+      <td>manual(m5)</td>
+      <td>21</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>auto(l5)</td>
+      <td>f</td>
+      <td>18</td>
+      <td>29</td>
+      <td>compact</td>
+      <td>auto(l4)</td>
+      <td>19</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>auto(l5)</td>
+      <td>f</td>
+      <td>18</td>
+      <td>29</td>
+      <td>compact</td>
+      <td>manual(m6)</td>
+      <td>21</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>auto(l5)</td>
+      <td>f</td>
+      <td>18</td>
+      <td>29</td>
+      <td>compact</td>
+      <td>auto(s6)</td>
+      <td>22</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>auto(l5)</td>
+      <td>f</td>
+      <td>18</td>
+      <td>29</td>
+      <td>compact</td>
+      <td>manual(m5)</td>
+      <td>17</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>auto(av)</td>
+      <td>f</td>
+      <td>18</td>
+      <td>27</td>
+      <td>compact</td>
+      <td>manual(m6)</td>
+      <td>21</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td>auto(av)</td>
+      <td>f</td>
+      <td>18</td>
+      <td>27</td>
+      <td>compact</td>
+      <td>auto(s6)</td>
+      <td>21</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>auto(av)</td>
+      <td>f</td>
+      <td>18</td>
+      <td>27</td>
+      <td>compact</td>
+      <td>manual(m5)</td>
+      <td>21</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>auto(av)</td>
+      <td>f</td>
+      <td>18</td>
+      <td>27</td>
+      <td>compact</td>
+      <td>auto(l4)</td>
+      <td>16</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>auto(av)</td>
+      <td>f</td>
+      <td>18</td>
+      <td>27</td>
+      <td>compact</td>
+      <td>manual(m5)</td>
+      <td>17</td>
+      <td>24</td>
+    </tr>
+  </tbody>
+</table>
+<p>98 rows × 8 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 결측치 찾아보기 </span>
+<span class="n">mpg_3</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>   <span class="c1"># 결측치 없음</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>새로운 데이터</li>
+<li>년도(2008년/1999년) 에 따른 변수들</li>
+</ul>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[135]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpg_1</span> <span class="o">=</span> <span class="n">mpg</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;year==2008&#39;</span><span class="p">)[[</span><span class="s1">&#39;manufacturer&#39;</span><span class="p">,</span> <span class="s1">&#39;cty&#39;</span><span class="p">,</span> <span class="s1">&#39;hwy&#39;</span><span class="p">,</span> <span class="s1">&#39;displ&#39;</span><span class="p">]]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[139]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpg_2</span> <span class="o">=</span> <span class="n">mpg</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;year==1999&#39;</span><span class="p">)[[</span><span class="s1">&#39;manufacturer&#39;</span><span class="p">,</span> <span class="s1">&#39;trans&#39;</span><span class="p">,</span> <span class="s1">&#39;displ&#39;</span><span class="p">]]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[140]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">mpg_1</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">mpg_2</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>manufacturer</th>
+      <th>cty</th>
+      <th>hwy</th>
+      <th>displ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>audi</td>
+      <td>20</td>
+      <td>31</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>audi</td>
+      <td>21</td>
+      <td>30</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>audi</td>
+      <td>18</td>
+      <td>27</td>
+      <td>3.1</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>audi</td>
+      <td>20</td>
+      <td>28</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>audi</td>
+      <td>19</td>
+      <td>27</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>225</th>
+      <td>volkswagen</td>
+      <td>20</td>
+      <td>28</td>
+      <td>2.5</td>
+    </tr>
+    <tr>
+      <th>226</th>
+      <td>volkswagen</td>
+      <td>20</td>
+      <td>29</td>
+      <td>2.5</td>
+    </tr>
+    <tr>
+      <th>229</th>
+      <td>volkswagen</td>
+      <td>19</td>
+      <td>28</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>230</th>
+      <td>volkswagen</td>
+      <td>21</td>
+      <td>29</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>233</th>
+      <td>volkswagen</td>
+      <td>17</td>
+      <td>26</td>
+      <td>3.6</td>
+    </tr>
+  </tbody>
+</table>
+<p>117 rows × 4 columns</p>
+</div>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>manufacturer</th>
+      <th>trans</th>
+      <th>displ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>audi</td>
+      <td>auto(l5)</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>audi</td>
+      <td>manual(m5)</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>audi</td>
+      <td>auto(l5)</td>
+      <td>2.8</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>audi</td>
+      <td>manual(m5)</td>
+      <td>2.8</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>audi</td>
+      <td>manual(m5)</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>224</th>
+      <td>volkswagen</td>
+      <td>auto(l4)</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>227</th>
+      <td>volkswagen</td>
+      <td>manual(m5)</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>228</th>
+      <td>volkswagen</td>
+      <td>auto(l5)</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>231</th>
+      <td>volkswagen</td>
+      <td>auto(l5)</td>
+      <td>2.8</td>
+    </tr>
+    <tr>
+      <th>232</th>
+      <td>volkswagen</td>
+      <td>manual(m5)</td>
+      <td>2.8</td>
+    </tr>
+  </tbody>
+</table>
+<p>117 rows × 3 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[141]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 데이터 결합</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">mpg_1</span><span class="p">,</span> <span class="n">mpg_2</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[141]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>manufacturer</th>
+      <th>cty</th>
+      <th>hwy</th>
+      <th>displ</th>
+      <th>manufacturer</th>
+      <th>trans</th>
+      <th>displ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>audi</td>
+      <td>auto(l5)</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>audi</td>
+      <td>manual(m5)</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>audi</td>
+      <td>20.0</td>
+      <td>31.0</td>
+      <td>2.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>audi</td>
+      <td>21.0</td>
+      <td>30.0</td>
+      <td>2.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>audi</td>
+      <td>auto(l5)</td>
+      <td>2.8</td>
+    </tr>
+    <tr>
+      <th>...</th>
       <td>...</td>
       <td>...</td>
       <td>...</td>
@@ -18520,86 +17243,56 @@ Name: manufacturer, dtype: int64</pre>
     <tr>
       <th>229</th>
       <td>volkswagen</td>
-      <td>passat</td>
+      <td>19.0</td>
+      <td>28.0</td>
       <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>auto(s6)</td>
-      <td>f</td>
-      <td>19</td>
-      <td>28</td>
-      <td>p</td>
-      <td>midsize</td>
-      <td>47</td>
-      <td>47</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>230</th>
       <td>volkswagen</td>
-      <td>passat</td>
+      <td>21.0</td>
+      <td>29.0</td>
       <td>2.0</td>
-      <td>2008</td>
-      <td>4</td>
-      <td>manual(m6)</td>
-      <td>f</td>
-      <td>21</td>
-      <td>29</td>
-      <td>p</td>
-      <td>midsize</td>
-      <td>50</td>
-      <td>50</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>231</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
       <td>volkswagen</td>
-      <td>passat</td>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>6</td>
       <td>auto(l5)</td>
-      <td>f</td>
-      <td>16</td>
-      <td>26</td>
-      <td>p</td>
-      <td>midsize</td>
-      <td>42</td>
-      <td>42</td>
+      <td>2.8</td>
     </tr>
     <tr>
       <th>232</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
       <td>volkswagen</td>
-      <td>passat</td>
-      <td>2.8</td>
-      <td>1999</td>
-      <td>6</td>
       <td>manual(m5)</td>
-      <td>f</td>
-      <td>18</td>
-      <td>26</td>
-      <td>p</td>
-      <td>midsize</td>
-      <td>44</td>
-      <td>44</td>
+      <td>2.8</td>
     </tr>
     <tr>
       <th>233</th>
       <td>volkswagen</td>
-      <td>passat</td>
+      <td>17.0</td>
+      <td>26.0</td>
       <td>3.6</td>
-      <td>2008</td>
-      <td>6</td>
-      <td>auto(s6)</td>
-      <td>f</td>
-      <td>17</td>
-      <td>26</td>
-      <td>p</td>
-      <td>midsize</td>
-      <td>43</td>
-      <td>43</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
-<p>234 rows × 13 columns</p>
+<p>234 rows × 7 columns</p>
 </div>
 </div>
 
@@ -18612,11 +17305,10 @@ Name: manufacturer, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[80]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[143]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># lamda식을 이용해 displ * cyl =mul 생성 후 mul 기준 내림차순 정렬</span>
-<span class="n">mpg</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">mul</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;displ&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;cyl&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;mul&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">mpg_1</span><span class="p">,</span> <span class="n">mpg_2</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;manufacturer&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -18632,7 +17324,7 @@ Name: manufacturer, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[80]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[143]:</div>
 
 
 
@@ -18656,100 +17348,58 @@ Name: manufacturer, dtype: int64</pre>
     <tr style="text-align: right;">
       <th></th>
       <th>manufacturer</th>
-      <th>model</th>
-      <th>displ</th>
-      <th>year</th>
-      <th>cyl</th>
-      <th>trans</th>
-      <th>drv</th>
       <th>cty</th>
       <th>hwy</th>
-      <th>fl</th>
-      <th>category</th>
-      <th>total</th>
-      <th>mul</th>
+      <th>displ_x</th>
+      <th>trans</th>
+      <th>displ_y</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>27</th>
-      <td>chevrolet</td>
-      <td>corvette</td>
-      <td>7.0</td>
-      <td>2008</td>
-      <td>8</td>
-      <td>manual(m6)</td>
-      <td>r</td>
-      <td>15</td>
-      <td>24</td>
-      <td>p</td>
-      <td>2seater</td>
-      <td>39</td>
-      <td>15.0</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>chevrolet</td>
-      <td>k1500 tahoe 4wd</td>
-      <td>6.5</td>
-      <td>1999</td>
-      <td>8</td>
-      <td>auto(l4)</td>
-      <td>4</td>
-      <td>14</td>
-      <td>17</td>
-      <td>d</td>
-      <td>suv</td>
+      <th>0</th>
+      <td>audi</td>
+      <td>20</td>
       <td>31</td>
-      <td>14.5</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>chevrolet</td>
-      <td>corvette</td>
-      <td>6.2</td>
-      <td>2008</td>
-      <td>8</td>
-      <td>auto(s6)</td>
-      <td>r</td>
-      <td>15</td>
-      <td>25</td>
-      <td>p</td>
-      <td>2seater</td>
-      <td>40</td>
-      <td>14.2</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>chevrolet</td>
-      <td>corvette</td>
-      <td>6.2</td>
-      <td>2008</td>
-      <td>8</td>
-      <td>manual(m6)</td>
-      <td>r</td>
-      <td>16</td>
-      <td>26</td>
-      <td>p</td>
-      <td>2seater</td>
-      <td>42</td>
-      <td>14.2</td>
-    </tr>
-    <tr>
-      <th>129</th>
-      <td>jeep</td>
-      <td>grand cherokee 4wd</td>
-      <td>6.1</td>
-      <td>2008</td>
-      <td>8</td>
+      <td>2.0</td>
       <td>auto(l5)</td>
-      <td>4</td>
-      <td>11</td>
-      <td>14</td>
-      <td>p</td>
-      <td>suv</td>
-      <td>25</td>
-      <td>14.1</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>audi</td>
+      <td>20</td>
+      <td>31</td>
+      <td>2.0</td>
+      <td>manual(m5)</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>audi</td>
+      <td>20</td>
+      <td>31</td>
+      <td>2.0</td>
+      <td>auto(l5)</td>
+      <td>2.8</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>audi</td>
+      <td>20</td>
+      <td>31</td>
+      <td>2.0</td>
+      <td>manual(m5)</td>
+      <td>2.8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>audi</td>
+      <td>20</td>
+      <td>31</td>
+      <td>2.0</td>
+      <td>manual(m5)</td>
+      <td>1.8</td>
     </tr>
     <tr>
       <th>...</th>
@@ -18759,604 +17409,893 @@ Name: manufacturer, dtype: int64</pre>
       <td>...</td>
       <td>...</td>
       <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
     </tr>
     <tr>
-      <th>101</th>
-      <td>honda</td>
-      <td>civic</td>
-      <td>1.6</td>
-      <td>1999</td>
-      <td>4</td>
-      <td>manual(m5)</td>
-      <td>f</td>
-      <td>25</td>
-      <td>32</td>
-      <td>r</td>
-      <td>subcompact</td>
-      <td>57</td>
-      <td>5.6</td>
-    </tr>
-    <tr>
-      <th>100</th>
-      <td>honda</td>
-      <td>civic</td>
-      <td>1.6</td>
-      <td>1999</td>
-      <td>4</td>
+      <th>1288</th>
+      <td>volkswagen</td>
+      <td>17</td>
+      <td>26</td>
+      <td>3.6</td>
       <td>auto(l4)</td>
-      <td>f</td>
-      <td>24</td>
-      <td>32</td>
-      <td>r</td>
-      <td>subcompact</td>
-      <td>56</td>
-      <td>5.6</td>
+      <td>2.0</td>
     </tr>
     <tr>
-      <th>99</th>
-      <td>honda</td>
-      <td>civic</td>
-      <td>1.6</td>
-      <td>1999</td>
-      <td>4</td>
+      <th>1289</th>
+      <td>volkswagen</td>
+      <td>17</td>
+      <td>26</td>
+      <td>3.6</td>
       <td>manual(m5)</td>
-      <td>f</td>
-      <td>28</td>
-      <td>33</td>
-      <td>r</td>
-      <td>subcompact</td>
-      <td>61</td>
-      <td>5.6</td>
+      <td>1.8</td>
     </tr>
     <tr>
-      <th>103</th>
-      <td>honda</td>
-      <td>civic</td>
-      <td>1.6</td>
-      <td>1999</td>
-      <td>4</td>
+      <th>1290</th>
+      <td>volkswagen</td>
+      <td>17</td>
+      <td>26</td>
+      <td>3.6</td>
+      <td>auto(l5)</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>1291</th>
+      <td>volkswagen</td>
+      <td>17</td>
+      <td>26</td>
+      <td>3.6</td>
+      <td>auto(l5)</td>
+      <td>2.8</td>
+    </tr>
+    <tr>
+      <th>1292</th>
+      <td>volkswagen</td>
+      <td>17</td>
+      <td>26</td>
+      <td>3.6</td>
+      <td>manual(m5)</td>
+      <td>2.8</td>
+    </tr>
+  </tbody>
+</table>
+<p>1293 rows × 6 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[144]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 교집합(기준: &#39;manufacturer&#39;, &#39;displ&#39; )</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">mpg_1</span><span class="p">,</span> <span class="n">mpg_2</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;manufacturer&#39;</span><span class="p">,</span> <span class="s1">&#39;displ&#39;</span><span class="p">])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[144]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>manufacturer</th>
+      <th>cty</th>
+      <th>hwy</th>
+      <th>displ</th>
+      <th>trans</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>chevrolet</td>
+      <td>22</td>
+      <td>30</td>
+      <td>2.4</td>
       <td>auto(l4)</td>
-      <td>f</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>dodge</td>
+      <td>17</td>
       <td>24</td>
-      <td>32</td>
-      <td>r</td>
-      <td>subcompact</td>
-      <td>56</td>
-      <td>5.6</td>
+      <td>3.3</td>
+      <td>auto(l4)</td>
     </tr>
     <tr>
-      <th>102</th>
-      <td>honda</td>
-      <td>civic</td>
-      <td>1.6</td>
-      <td>1999</td>
-      <td>4</td>
-      <td>manual(m5)</td>
-      <td>f</td>
-      <td>23</td>
-      <td>29</td>
-      <td>p</td>
-      <td>subcompact</td>
-      <td>52</td>
-      <td>5.6</td>
-    </tr>
-  </tbody>
-</table>
-<p>234 rows × 13 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="gropupby">gropupby<a class="anchor-link" href="#gropupby">&#182;</a></h4><ul>
-<li>agg 사용하기</li>
-</ul>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[85]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># model별 cyl_mean 추출하고 cyl_mean 기준 오림차순으로 정렬하기</span>
-<span class="n">mpg</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;model&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">cyl_mean</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;cyl&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;cyl_mean&#39;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[85]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>cyl_mean</th>
+      <th>2</th>
+      <td>dodge</td>
+      <td>17</td>
+      <td>24</td>
+      <td>3.3</td>
+      <td>auto(l4)</td>
     </tr>
     <tr>
-      <th>model</th>
-      <th></th>
+      <th>3</th>
+      <td>dodge</td>
+      <td>17</td>
+      <td>24</td>
+      <td>3.3</td>
+      <td>auto(l4)</td>
     </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>forester awd</th>
-      <td>4.000000</td>
-    </tr>
-    <tr>
-      <th>impreza awd</th>
-      <td>4.000000</td>
-    </tr>
-    <tr>
-      <th>corolla</th>
-      <td>4.000000</td>
-    </tr>
-    <tr>
-      <th>civic</th>
-      <td>4.000000</td>
-    </tr>
-    <tr>
-      <th>new beetle</th>
-      <td>4.333333</td>
-    </tr>
-    <tr>
-      <th>gti</th>
-      <td>4.400000</td>
-    </tr>
-    <tr>
-      <th>jetta</th>
-      <td>4.666667</td>
-    </tr>
-    <tr>
-      <th>altima</th>
-      <td>4.666667</td>
-    </tr>
-    <tr>
-      <th>passat</th>
-      <td>4.857143</td>
-    </tr>
-    <tr>
-      <th>camry</th>
-      <td>4.857143</td>
-    </tr>
-    <tr>
-      <th>camry solara</th>
-      <td>4.857143</td>
-    </tr>
-    <tr>
-      <th>tiburon</th>
-      <td>4.857143</td>
-    </tr>
-    <tr>
-      <th>sonata</th>
-      <td>4.857143</td>
-    </tr>
-    <tr>
-      <th>a4</th>
-      <td>4.857143</td>
-    </tr>
-    <tr>
-      <th>a4 quattro</th>
-      <td>5.000000</td>
-    </tr>
-    <tr>
-      <th>toyota tacoma 4wd</th>
-      <td>5.142857</td>
-    </tr>
-    <tr>
-      <th>malibu</th>
-      <td>5.200000</td>
-    </tr>
-    <tr>
-      <th>4runner 4wd</th>
-      <td>5.666667</td>
-    </tr>
-    <tr>
-      <th>caravan 2wd</th>
-      <td>5.818182</td>
-    </tr>
-    <tr>
-      <th>maxima</th>
-      <td>6.000000</td>
-    </tr>
-    <tr>
-      <th>grand prix</th>
-      <td>6.400000</td>
-    </tr>
-    <tr>
-      <th>pathfinder 4wd</th>
-      <td>6.500000</td>
-    </tr>
-    <tr>
-      <th>explorer 4wd</th>
-      <td>6.666667</td>
-    </tr>
-    <tr>
-      <th>a6 quattro</th>
-      <td>6.666667</td>
-    </tr>
-    <tr>
-      <th>mountaineer 4wd</th>
-      <td>7.000000</td>
-    </tr>
-    <tr>
-      <th>mustang</th>
-      <td>7.111111</td>
-    </tr>
-    <tr>
-      <th>dakota pickup 4wd</th>
-      <td>7.111111</td>
-    </tr>
-    <tr>
-      <th>grand cherokee 4wd</th>
-      <td>7.250000</td>
-    </tr>
-    <tr>
-      <th>f150 pickup 4wd</th>
-      <td>7.428571</td>
-    </tr>
-    <tr>
-      <th>durango 4wd</th>
-      <td>7.714286</td>
-    </tr>
-    <tr>
-      <th>corvette</th>
-      <td>8.000000</td>
-    </tr>
-    <tr>
-      <th>k1500 tahoe 4wd</th>
-      <td>8.000000</td>
-    </tr>
-    <tr>
-      <th>navigator 2wd</th>
-      <td>8.000000</td>
-    </tr>
-    <tr>
-      <th>c1500 suburban 2wd</th>
-      <td>8.000000</td>
-    </tr>
-    <tr>
-      <th>ram 1500 pickup 4wd</th>
-      <td>8.000000</td>
-    </tr>
-    <tr>
-      <th>range rover</th>
-      <td>8.000000</td>
-    </tr>
-    <tr>
-      <th>expedition 2wd</th>
-      <td>8.000000</td>
-    </tr>
-    <tr>
-      <th>land cruiser wagon 4wd</th>
-      <td>8.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[86]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># fl별 cty_mean, hwy_mean 추출하기</span>
-<span class="n">mpg</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;fl&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">cty_mean</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;cty&#39;</span><span class="p">,</span><span class="s1">&#39;mean&#39;</span><span class="p">),</span> 
-                      <span class="n">hwy_mean</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;hwy&#39;</span><span class="p">,</span><span class="s1">&#39;mean&#39;</span><span class="p">))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[86]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>cty_mean</th>
-      <th>hwy_mean</th>
-    </tr>
-    <tr>
-      <th>fl</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>c</th>
-      <td>24.000000</td>
-      <td>36.000000</td>
-    </tr>
-    <tr>
-      <th>d</th>
-      <td>25.600000</td>
-      <td>33.600000</td>
-    </tr>
-    <tr>
-      <th>e</th>
-      <td>9.750000</td>
-      <td>13.250000</td>
-    </tr>
-    <tr>
-      <th>p</th>
-      <td>17.365385</td>
-      <td>25.230769</td>
-    </tr>
-    <tr>
-      <th>r</th>
-      <td>16.738095</td>
-      <td>22.994048</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[88]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># category별 cyl_mean 추출하고 오름차순으로 정렬해라 </span>
-<span class="n">mpg</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">cyl_mean</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;cyl&#39;</span><span class="p">,</span><span class="s1">&#39;mean&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;cyl_mean&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[88]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>cyl_mean</th>
-    </tr>
-    <tr>
-      <th>category</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>compact</th>
-      <td>4.595745</td>
-    </tr>
-    <tr>
-      <th>subcompact</th>
-      <td>5.028571</td>
-    </tr>
-    <tr>
-      <th>midsize</th>
-      <td>5.317073</td>
-    </tr>
-    <tr>
-      <th>minivan</th>
-      <td>5.818182</td>
-    </tr>
-    <tr>
-      <th>suv</th>
-      <td>6.967742</td>
-    </tr>
-    <tr>
-      <th>pickup</th>
-      <td>7.030303</td>
-    </tr>
-    <tr>
-      <th>2seater</th>
-      <td>8.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[89]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># drv별 trans_min, trans_max, cyl_min, cyl_max 추출해라</span>
-<span class="n">mpg</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;drv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">trans_min</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;cty&#39;</span><span class="p">,</span><span class="s1">&#39;min&#39;</span><span class="p">),</span> 
-                       <span class="n">trans_max</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;hwy&#39;</span><span class="p">,</span><span class="s1">&#39;max&#39;</span><span class="p">),</span>
-                       <span class="n">cyl_min</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;cyl&#39;</span><span class="p">,</span> <span class="s1">&#39;min&#39;</span><span class="p">),</span>
-                       <span class="n">cyl_max</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;cyl&#39;</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[89]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>trans_min</th>
-      <th>trans_max</th>
-      <th>cyl_min</th>
-      <th>cyl_max</th>
-    </tr>
-    <tr>
-      <th>drv</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
     <tr>
       <th>4</th>
-      <td>9</td>
-      <td>28</td>
-      <td>4</td>
-      <td>8</td>
+      <td>dodge</td>
+      <td>17</td>
+      <td>24</td>
+      <td>3.3</td>
+      <td>auto(l4)</td>
     </tr>
     <tr>
-      <th>f</th>
-      <td>11</td>
-      <td>44</td>
-      <td>4</td>
-      <td>8</td>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
-      <th>r</th>
-      <td>11</td>
-      <td>26</td>
-      <td>6</td>
-      <td>8</td>
+      <th>133</th>
+      <td>volkswagen</td>
+      <td>21</td>
+      <td>29</td>
+      <td>2.0</td>
+      <td>auto(l4)</td>
+    </tr>
+    <tr>
+      <th>134</th>
+      <td>volkswagen</td>
+      <td>21</td>
+      <td>29</td>
+      <td>2.0</td>
+      <td>manual(m5)</td>
+    </tr>
+    <tr>
+      <th>135</th>
+      <td>volkswagen</td>
+      <td>21</td>
+      <td>29</td>
+      <td>2.0</td>
+      <td>auto(l4)</td>
+    </tr>
+    <tr>
+      <th>136</th>
+      <td>volkswagen</td>
+      <td>21</td>
+      <td>29</td>
+      <td>2.0</td>
+      <td>manual(m5)</td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td>volkswagen</td>
+      <td>21</td>
+      <td>29</td>
+      <td>2.0</td>
+      <td>auto(l4)</td>
     </tr>
   </tbody>
 </table>
+<p>138 rows × 5 columns</p>
 </div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[211]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># right(mpg_2) 의 &#39;manufacturer&#39;, &#39;displ&#39; 기준 결합</span>
+<span class="n">mpg_4</span> <span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">mpg_1</span><span class="p">,</span> <span class="n">mpg_2</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;manufacturer&#39;</span><span class="p">,</span> <span class="s1">&#39;displ&#39;</span><span class="p">])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[205]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpg_4</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[205]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>manufacturer</th>
+      <th>cty</th>
+      <th>hwy</th>
+      <th>displ</th>
+      <th>trans</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>audi</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.8</td>
+      <td>auto(l5)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>audi</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.8</td>
+      <td>manual(m5)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>audi</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.8</td>
+      <td>manual(m5)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>audi</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.8</td>
+      <td>auto(l5)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>audi</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2.8</td>
+      <td>auto(l5)</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>207</th>
+      <td>volkswagen</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.9</td>
+      <td>manual(m5)</td>
+    </tr>
+    <tr>
+      <th>208</th>
+      <td>volkswagen</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.9</td>
+      <td>manual(m5)</td>
+    </tr>
+    <tr>
+      <th>209</th>
+      <td>volkswagen</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.9</td>
+      <td>auto(l4)</td>
+    </tr>
+    <tr>
+      <th>210</th>
+      <td>volkswagen</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.8</td>
+      <td>manual(m5)</td>
+    </tr>
+    <tr>
+      <th>211</th>
+      <td>volkswagen</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.8</td>
+      <td>auto(l5)</td>
+    </tr>
+  </tbody>
+</table>
+<p>212 rows × 5 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[186]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpg_4</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span> <span class="c1"># na값 확인</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[186]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>manufacturer</th>
+      <th>cty</th>
+      <th>hwy</th>
+      <th>displ</th>
+      <th>trans</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>207</th>
+      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>208</th>
+      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>209</th>
+      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>210</th>
+      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>211</th>
+      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+<p>212 rows × 5 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[206]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpg_4</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[206]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>manufacturer     0
+cty             74
+hwy             74
+displ            0
+trans            0
+dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[192]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 결측치 제거</span>
+<span class="n">mpg_4</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cty&#39;</span><span class="p">])</span> <span class="c1"># cty 에 대한 결측치만 제거</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[192]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>manufacturer</th>
+      <th>cty</th>
+      <th>hwy</th>
+      <th>displ</th>
+      <th>trans</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>14</th>
+      <td>chevrolet</td>
+      <td>22.0</td>
+      <td>30.0</td>
+      <td>2.4</td>
+      <td>auto(l4)</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>dodge</td>
+      <td>17.0</td>
+      <td>24.0</td>
+      <td>3.3</td>
+      <td>auto(l4)</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>dodge</td>
+      <td>17.0</td>
+      <td>24.0</td>
+      <td>3.3</td>
+      <td>auto(l4)</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>dodge</td>
+      <td>11.0</td>
+      <td>17.0</td>
+      <td>3.3</td>
+      <td>auto(l4)</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>dodge</td>
+      <td>17.0</td>
+      <td>24.0</td>
+      <td>3.3</td>
+      <td>auto(l4)</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>197</th>
+      <td>volkswagen</td>
+      <td>22.0</td>
+      <td>29.0</td>
+      <td>2.0</td>
+      <td>auto(l4)</td>
+    </tr>
+    <tr>
+      <th>198</th>
+      <td>volkswagen</td>
+      <td>22.0</td>
+      <td>29.0</td>
+      <td>2.0</td>
+      <td>auto(l4)</td>
+    </tr>
+    <tr>
+      <th>199</th>
+      <td>volkswagen</td>
+      <td>21.0</td>
+      <td>29.0</td>
+      <td>2.0</td>
+      <td>auto(l4)</td>
+    </tr>
+    <tr>
+      <th>200</th>
+      <td>volkswagen</td>
+      <td>19.0</td>
+      <td>28.0</td>
+      <td>2.0</td>
+      <td>auto(l4)</td>
+    </tr>
+    <tr>
+      <th>201</th>
+      <td>volkswagen</td>
+      <td>21.0</td>
+      <td>29.0</td>
+      <td>2.0</td>
+      <td>auto(l4)</td>
+    </tr>
+  </tbody>
+</table>
+<p>138 rows × 5 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[207]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 결측치 대체</span>
+<span class="c1"># 1. 평균</span>
+<span class="n">mpg_4</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[207]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>cty      18.289855
+hwy      25.224638
+displ     3.116038
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[208]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpg_4</span><span class="p">[</span><span class="s1">&#39;cty&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mpg_4</span><span class="p">[</span><span class="s1">&#39;cty&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[209]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpg_4</span><span class="p">[</span><span class="s1">&#39;hwy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mpg_4</span><span class="p">[</span><span class="s1">&#39;hwy&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[210]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpg_4</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="c1"># 기존과 거의 비슷하게 나옴</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[210]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>cty      18.188679
+hwy      25.146226
+displ     3.116038
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[212]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 2. 0으로 채우기</span>
+<span class="n">mpg_4</span><span class="p">[</span><span class="s1">&#39;cty&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mpg_4</span><span class="p">[</span><span class="s1">&#39;cty&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mpg_4</span><span class="p">[</span><span class="s1">&#39;hwy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mpg_4</span><span class="p">[</span><span class="s1">&#39;hwy&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[213]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpg_4</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>  <span class="c1"># 값이 작아짐</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[213]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>cty      11.905660
+hwy      16.419811
+displ     3.116038
+dtype: float64</pre>
 </div>
 
 </div>
